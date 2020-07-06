@@ -1,0 +1,176 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block Title %}
+    Python
+{% endblock Title %}
+
+{% block Contents %}
+    <link rel="stylesheet" href="{% static "python/styling/definisi.css" %}">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-12 col-lg-7" id="article">
+          <h1>Mengenal Python</h1>
+          <hr class="bg-dark mb-5">
+
+          <img class="mb-5" src="{% static 'img/cover/python.png' %}" alt="cover" width="610px">
+
+            <p>Python dikembangkan oleh <b>Guido van Rossum</b> pada <b>tahun 1990 di Stichting Mathematisch Centrum (CWI), Amsterdam sebagai kelanjutan dari bahasa pemrograman ABC</b>. Versi terakhir yang dikeluarkan CWI adalah 1.2. </p>
+            <p>Tahun 1995, Guido pindah ke CNRI di Virginia Amerika sambil terus melanjutkan pengembangan Python.</p>
+            <p>Versi terakhir yang dikeluarkan adalah 1.6. Tahun 2000, oleh Guido dan para pengembang inti Python pindah ke BeOpen.com yang merupakan sebuah perusahaan komersial dan membentuk BeOpen PythonLabs.</p>
+            <p>Python 2.0 dikeluarkan oleh <b>BeOpen</b>. Setelah mengeluarkan Python 2.0, Guido dan beberapa anggota tim PythonLabs pindah ke DigitalCreations. </p>
+            <p>Saat ini pengembangan Python terus dilakukan oleh sekumpulan pemrogram yang dikoordinir Guido dan Python Software Foundation.</p>
+
+            <p>Python Software Foundation adalah sebuah organisasi non-profit yang dibentuk sebagai pemegang hak cipta intelektual Python sejak versi 2.1 dan dengan demikian mencegah Python dimiliki oleh perusahaan komersial.</p>
+            <p>Saat ini distribusi Python sudah mencapai versi 2.7.14 dan versi 3.7.4 </p>
+            <p>Apa itu Python ?</p>
+            <p><i>"Python is interpreter language."</i></p>
+            <p>Artinya python ini hanya bekerja pada mengeksekusi kode program (yang dibuat oleh programmer) lalu menerjemahkannya dalam bentuk bahasa mesin sehingga mesin melakukan instruksi yang diminta oleh programmer tersebut.</p>
+            <p>Jadi, bisa kita simpulkan bahwa cara kerja bahasa pemrogramman python yaitu :</p>
+            <ol>
+              <li>Skrip dibuat,</li>
+              <li>Skrip tersebut diterjemahkan ke dalam kode binner oleh (interpreter) python. Agar komputer mengerti perintah yang  diberikan.</li>
+              <li>Komputer menjalankan perintah tersebut.</li>
+            </ol>
+
+            <h3 class="mt-4 mb-2">Cara Installasi Python Untuk Pengguna Ubuntu 18.04</h3>
+            <p>Python mendukung semua sistem operasi, bahkan untuk sistem operasi Linux, hampir distronya menyertakan Python didalamnya.</p>
+            <p>Jika kita menggunakan sistem operasi linux, ini langkah untuk installasi :</p>
+            <ol>
+              <li>Kunjungi link <a href="http://python.org">http://python.org<a></li>
+              <li>
+                Buka terminal dengan tekan <b>Ctrl+Alt+T</b>, lalu masukkan perintah seperti ini kemudian tekan <b>Enter</b> : <br>
+                <code class="text-dark" id="code">
+                  $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-doc libgdbm-dev libc6-dev libbz2-dev
+                </code> <br>
+                Jika terdapat error pada package, maka lakukan hal ini :
+                <ul>
+                  <li>Buka synaptic package manager, bila belum punya segera install karena ini sangat penting.</li>
+                  <li>Lakukan update atau install package yang error tersebut.</li>
+                </ul>
+                Jika kalian tiba – tiba mendapatkan notifikasi seperti ini : <br>
+
+                  <pre class="mt-4" data-codetype="Python"><code>E: Could not get lock /var/lib/dpkg/lock-frontend - open <br>   (11: Resource temporarily unavailable)<br>E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/<br>   lock-frontend), is another process using it?</code></pre>
+
+                maka lakukan hal ini :
+                <ul>
+                  <li>
+                    Cari proses apt yang sedang berjalan dengan menginputkan perintah ini kedalam terminal : <br>
+                    <code class="text-dark" id="code">
+                      $ ps | grep -i apt
+                    </code>
+                  </li>
+                  <li>
+                    Bila sudah ketemu, lakukan pemberhentian proses yang sedang berjalan tersebut dengan menginputkan perintah seperti ini : <br>
+                    <code  class="text-dark" id="code">$ sudo kill -9 PID <b>(Proses ID)</b></code>
+                  </li>
+                  <li>Lock files sendiri digunakan untuk mencegah adanya dua proses apt yang berjalan bersamaan di sistem yang sama. Kita bisa memperbaikinya dnegan menghapus lock files tersebut dan mengkonfigurasi ulang package dpkg.</li>
+                </ul>
+              </li>
+              <li>
+                Masukan perintah <code class="text-dark" id="code">$ ./configure</code>
+              </li>
+              <li>
+                Masukkan perintah <code  class="text-dark" id="code">$ make</code> setelah itu <code  class="text-dark" id="code">$ sudo make install</code> <br>
+                Jika tiba – tiba kalian mendapatkan notifikasi seperti ini :
+
+                    <pre class="mt-4" data-codetype="Python"><code>Error No Module Named '_ctypes'</code></pre>
+
+
+                Maka lakukan install package <code class="text-dark" id="code">libffi-dev</code> pada synaptic package manager.
+              </li>
+              <li>
+                Setelah berhasil periksa ulang kembali, dengan memasukkan beberapa perintah seperti ini pada terminal :<br>
+                <code  class="text-dark" id="code">
+                $ sudo make install</code><br>
+                <code  class="text-dark" id="code">
+                $ which python3.7 </code> (versi yang telah diinstall) <br>
+                <code  class="text-dark" id="code">
+                $ which pip3.7</code> (versi yang telah diinstall)
+              </li>
+            </ol>
+            <!-- Menjalankan Python -->
+            <h3 class="mt-4 mb-2">Menjalankan Python</h3>
+            <ul>
+              <li>Masuk ke terminal (Ctrl+Alt+T)</li>
+              <li>Masukkan perintah <span id="code">python</span>
+                   maka output yang dikeluarkan :
+
+                  <pre class="mt-4" data-codetype="Python"><code>:~$ python <br>Python 2.7.17 (default, Nov  7 2019, 10:07:09)<br>[GCC 7.4.0] on linux2 <br>Type "help", "copyright", "credits" or "license" for <br>more information. <br>>>></code></pre>
+
+              </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-12 col-lg-4"  id="sidebar">
+          <div class="card shadow">
+              <div class="card-body">
+                <h2 class="text-dark text-center">Artikel Terkait</h2>
+                <ul class="list-group">
+                  {% for content in content_list  %}
+                    <a class="text-dark" id="title" href="{% url 'python:content' content.slug %}">
+                      <li class="list-group-item">{{content.title}}</li>
+                    </a>
+                  {% endfor %}
+                </ul>
+              </div>
+          </div>
+
+          <div class="card shadow mt-5">
+            <div class="card-body">
+              <h2 class="text-dark text-center">Tutorial Lainnya</h2>
+              <ul class="list-group">
+                <a href="{% url 'html:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/html.png' %}" alt="" width="30px">
+                    <span  class="text-dark" id="title">HTML</span>
+                  </li>
+                </a>
+                <a href="{% url 'css:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/css.png' %}" alt="" width="30px">
+                    <span class="text-dark" id="title">CSS</span>
+                  </li>
+                </a>
+                <a href="{% url 'js:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/js.png' %}" alt="" width="30px">
+                    <span  class="text-dark" id="title">Javascript</span>
+                  </li>
+                </a>
+                <a href="{% url 'dom:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/dom.png' %}" alt="" width="30px">
+                    <span  class="text-dark" id="title">DOM</span>
+                  </li>
+                </a>
+                <a href="{% url 'bootstrap:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/bootstrap.png' %}" alt="" width="30px">
+                    <span  class="text-dark" id="title">Bootstrap</span>
+                  </li>
+                </a>
+                <a href="{% url 'oop:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/oop.png' %}" alt="" width="30px">
+                    <span  class="text-dark" id="title">OOP</span>
+                  </li>
+                </a>
+                <a href="{% url 'django:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/django.png' %}" alt="" width="30px">
+                    <span class="text-dark" id="title">Django</span>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+{% endblock Contents %}

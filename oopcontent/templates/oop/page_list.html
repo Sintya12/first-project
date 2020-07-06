@@ -1,0 +1,93 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block Title %}
+    OOP
+{% endblock Title %}
+
+{% block page_title %}
+    <div class="jumbotron-fluid ml-5">
+      <h1 class="display-3 text-dark">OOP</h1>
+      <h1 class="text-dark mb-5">Tutorial bagi para pemula</h1>
+    </div>
+{% endblock page_title %}
+
+{% block Contents %}
+    <link rel="stylesheet" href="{% static "oop/styling/page.css" %}">
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-12 col-lg-8 "  style="margin-bottom: 200px;" id="article">
+          <div class="card shadow">
+            <div class="card-body">
+              <a href="{% url 'oop:definisi' %}" class="text-dark" id="title">Mengenal OOP</a>
+            </div>
+          </div>
+          {% for content in content_list  %}
+            <div class="card shadow">
+              <div class="card-body">
+                <a href="{% url 'oop:content' content.slug %}" class="text-dark" id="title">{{content.title}}</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="col-sm-12 col-lg-4" id="sidebar">
+          <div class="card shadow">
+            <div class="card-body">
+              <h3 class="text-center">Tutorial Lainnya</h3>
+              <ul class="list-group">
+                <a href="{% url 'html:page' %}" class="text-dark" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/html.png' %}" alt="" width="30px">
+                    <span id="title">HTML</span>
+                  </li>
+                </a>
+                <a href="{% url 'css:page' %}" class="text-dark" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/css.png' %}" alt="" width="30px">
+                    <span id="title">CSS</span>
+                  </li>
+                </a>
+                <a href="{% url 'js:page' %}" class="text-dark" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/js.png' %}" alt="" width="30px">
+                    <span id="title">Javascript</span>
+                  </li>
+                </a>
+                <a href="{% url 'bootstrap:page' %}" class="text-dark" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/bootstrap.png' %}" alt="" width="30px">
+                    <span id="title">Bootstrap</span>
+                  </li>
+                </a>
+                <a href="{% url 'bootstrap:page' %}" class="text-dark" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/dom.png' %}" alt="" width="30px">
+                    <span id="title">DOM</span>
+                  </li>
+                </a>
+                <a href="{% url 'python:page' %}" class="text-dark" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/python.png' %}" alt="" width="30px">
+                    <span id="title">Python</span>
+                  </li>
+                </a>
+                <a href="{% url 'django:page' %}" class="text-dark" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/django.png' %}" alt="" width="30px">
+                    <span id="title">Django</span>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+
+
+{% endblock Contents %}

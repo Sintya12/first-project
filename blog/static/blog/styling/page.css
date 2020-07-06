@@ -1,0 +1,43 @@
+@font-face{
+  font-family: 'Quicksand';
+  src: url('../vendor/font/Quicksand/static/Quicksand-Regular.ttf')format('truetype');
+}
+body{
+  position: relative;
+  font-family: 'Quicksand';
+}
+#article{
+  margin-top: 150px;
+  margin-left: 50px;
+  font-size: 14pt;
+  text-align: justify;
+}
+#article .card{
+  margin-bottom: 100px;
+}
+#article .card-body h2{
+  margin-top: 20px;
+  font-weight: bold;
+}
+hr{
+  background-color: #343a40;
+  margin-top: 0px;
+  margin-right: 15px;
+}
+#article p{
+  padding-right: 20px;
+}
+#gambar{
+  margin-left: -50px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  float: left;
+  width: 500px;
+  height: 300px;
+}
+.btn{
+  margin-top: 10px;
+  font-size: 13pt;
+  font-weight: bold;
+}

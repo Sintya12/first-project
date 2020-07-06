@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block Title %}
+  {{content.title}}
+{% endblock Title %}
+
+{% block Contents %}
+<link rel="stylesheet" href="{% static 'blog/styling/content.css' %}">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-8" id="article" style="margin-top: 150px;margin-bottom: 100px;">
+      <h2>{{content.title}}</h2>
+      <hr class="bg-dark mb-5 mt-0" size="10px">
+      <img class="media" src="{{content.cover.url}}" alt="" width="730px">
+      <p class="mt-5">{{content.content|linebreaksbr}}</p>
+      <h3 class="mt-4 mb-2">{{content.title1}}</h3>
+      <p>{{content.content1|linebreaksbr}}</p>
+      <h3 class="mt-4 mb-2">{{content.title2}}</h3>
+      <p>{{content.content2|linebreaksbr}}</p>
+      <h3 class="mt-4 mb-2">{{content.title3}}</h3>
+      <p>{{content.content3|linebreaksbr}}</p>
+
+      <!-- Artikel Terkait  -->
+      <h2 class="mt-5">Artikel Terkait</h2>
+      <hr class="bg-secondary mt-0 mb-5">
+      <div class="card-deck">
+        {% for content in other_content  %}
+          <div class="card" style="max-width: 14rem;">
+            <img class="card-img-top"  src="{{content.cover.url}}" alt="" widt="20px">
+            <div class="card-body">
+              <a href="{% url 'blog:content' content.slug %}" id="title">
+                <h5 class="card-title text-dark" id="title">{{content.title}}</h5>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock Contents %}

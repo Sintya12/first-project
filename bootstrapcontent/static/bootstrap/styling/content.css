@@ -1,0 +1,173 @@
+@font-face{
+  font-family: 'Quicksand';
+  src: url('../vendor/font/Quicksand/static/Quicksand-Regular.ttf')format('truetype');
+}
+body{
+  position: relative;
+  font-family: 'Quicksand';
+}
+div #article{
+  font-size: 15pt;
+  margin: 150px 80px 100px 20px;
+  text-align: justify;
+  line-height: 35px;
+}
+#article h1{
+  font-weight: bold;
+}
+#article hr{
+  margin-top: -5px;
+}
+#article h3{
+  font-weight: bold;
+  font-size: 19pt;
+}
+#article #image{
+  margin-top: 30px;
+}
+/* CODE */
+#pre{
+  margin-left: -80px;
+}
+pre,i[rel="pre"] {
+  padding:.9em 0 .9em 1em;
+  margin: 10px 0px 30px 0px;
+  background-color:#2f3741;
+  border-left:4px solid #40627E;
+  font-size:12pt;
+  color:#C0C0C0;
+  font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,Monospace;
+  line-height:1.4em;
+  position:relative;
+  white-space: pre;
+  word-wrap: normal;
+  white-space:pre;
+  overflow:auto;
+}
+pre.line-number[data-codetype="CSS"]:before{background-color:#a9d86e}
+pre.line-number[data-codetype="HTML"]:before{background-color:#4fc1eb}
+pre.line-number[data-codetype="JavaScript"]:before{background-color:#ff6c60}
+pre.line-number[data-codetype="JQuery"]:before{background-color:#99c262}
+code {
+  font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,Monospace;
+  font-size:13px;
+  color: #d14;
+}
+#comments code {
+  color:#bbbb6d;
+}
+pre code {
+  padding:0 !important;
+  color: #a3a49a;
+  background: none !important;
+  border:none !important;
+  display:block;
+}
+pre .line-number {
+  float:left;
+  margin:0 1em 0 -1em;
+  color:#61686d;
+  background-color:#39424e;
+  text-align:right;
+  min-width:2.5em;
+  padding-right:4px;
+}
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .pi,
+pre .lisp .string,
+pre .javadoc {
+  color: #586e75;
+  font-style: italic;
+}
+pre .keyword,
+pre .winutils,
+pre .method,
+pre .addition,
+pre .css .tag,
+pre .request,
+pre .status,
+pre .nginx .title {
+  color: #859900;
+}
+pre .number,
+pre .command,
+pre .string,
+pre .tag .value,
+pre .rules .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+  color: #7195a3;
+}
+pre .title,
+pre .localvars,
+pre .chunk,
+pre .decorator,
+pre .built_in,
+pre .identifier,
+pre .vhdl .literal,
+pre .id,
+pre .css .function {
+  color: #569dcf;
+}
+pre .attribute,
+pre .variable,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .type {
+  color: #aa985a;
+}
+pre .preprocessor,
+pre .preprocessor .keyword,
+pre .shebang,
+pre .symbol,
+pre .symbol .string,
+pre .diff .change,
+pre .special,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata,
+pre .clojure .title,
+pre .css .pseudo {
+  color: #509a55;
+}
+pre .deletion {
+  color: #dc322f;
+}
+pre .tex .formula {background: #073642;}
+/* sidebar */
+#sidebar .card{
+  margin-right: 50px;
+}
+.text-center{
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20pt;
+}
+.text-center:hover{
+  font-weight: lighter;
+  transition: 0.3s;
+}
+#title{
+  font-size: 13pt;
+  text-decoration: none;
+}
+span{
+  margin-left: 10px;
+}
+.list-group-item:visited,
+.list-group-item:focus,
+.list-group-item:hover{
+  border-color: #292b2c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}

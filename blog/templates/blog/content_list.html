@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block Title %}
+    blog
+{% endblock Title %}
+
+{% block Contents %}
+    <link rel="stylesheet" href="{% static 'blog/styling/page.css' %}">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-11" id="article">
+          {% for content in content_list  %}
+          <div class="card shadow">
+            <div class="card-body">
+              <img id="gambar" src="{{content.cover.url}}" alt="" width="500px">
+              <h2>{{content.title}}</h2>
+              <hr>
+              <p>{{content.content|truncatewords:30}}</p>
+              <a class="btn btn-default text-dark shadow" role="button" href="{% url 'blog:content' content.slug %}">Baca Selengkapnya&#62;&#62;</a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+{% endblock Contents %}

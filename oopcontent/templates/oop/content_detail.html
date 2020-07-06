@@ -1,0 +1,115 @@
+{% extends "index.html" %}
+{% load static %}
+{% block Title %}
+   {{content.title}}
+{% endblock Title %}
+
+{% block Contents %}
+    <link rel="stylesheet" href="{% static "oop/styling/content.css" %}">
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-12 col-lg-7" id="article">
+          <h1>{{content.subtitle}}</h1>
+          <hr class="bg-dark mb-5">
+          <img class="mb-4" src="{{content.cover.url}}" alt="cover" width="680px;">
+          <p>{{content.content|linebreaksbr}}</p>
+          <h3 class="mt-5 mb-2">{{content.title1}}</h3>
+          <p>{{content.content1|linebreaksbr}}</p>
+          <h3 class="mt-5 mb-2">{{content.title2}}</h3>
+          <p>{{content.content2|linebreaksbr}}</p>
+          <h3 class="mt-5 mb-2">{{content.title3}}</h3>
+          <p>{{content.content3|linebreaksbr}}</p>
+            <pre data-codetype="OOP"><code>{{content.code3|linebreaksbr}}</code></pre>
+          <p>{{content.text3|linebreaksbr}}</p>
+          <h3 class="mt-5 mb-2">{{content.title4}}</h3>
+          <p>{{content.content4|linebreaksbr}}</p>
+            <pre data-codetype="OOP"><code>{{content.code4|linebreaksbr}}</code></pre>
+          <p class="mr-4 mt-2">{{content.konteks4|linebreaksbr}}</p>
+          <p>{{content.caption4|linebreaksbr}}</p>
+          <h3 class="mt-5 mb-2">{{content.title5}}</h3>
+          <p>{{content.content5|linebreaksbr}}</p>
+            <pre data-codetype="OOP"><code>{{content.code5|linebreaksbr}}</code></pre>
+          <p>{{content.text5}}</p>
+            <pre data-codetype="OOP"><code>{{content.code6|linebreaksbr}}</code></pre>
+          <p>{{content.caption5|linebreaksbr}}</p>
+        </div>
+
+        <div class="col-sm-12 col-lg-4" style="margin-top: 250px;" id="sidebar">
+          <div class="card shadow">
+              <div class="card-body">
+                <h2 class="text-center">Artikel Terkait</h2>
+                <ul class="list-group">
+                  <a class="text-dark" id="title" href="{% url 'oop:definisi' %}">
+                    <li class="list-group-item">Mengenal OOP</li>
+                  </a>
+                  {% for content in other_content %}
+                    <a class="text-dark" id="title" href="{% url 'oop:content' content.slug %}">
+                      <li class="list-group-item">{{content.title}}</li>
+                    </a>
+                  {% endfor %}
+                </ul>
+              </div>
+          </div>
+
+          <div class="card shadow mt-5">
+            <div class="card-body">
+              <h2 class="text-center">Tutorial Lainnya</h2>
+              <ul class="list-group">
+                <a class="text-dark" id="title" href="{% url 'html:page' %}" >
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/html.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">HTML</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'css:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/css.png' %}" alt="" width="30px">
+                    <span id="title">CSS</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'js:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/js.png' %}" alt="" width="30px">
+                    <span id="title">Javascript</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'dom:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/dom.png' %}" alt="" width="30px">
+                    <span id="title">DOM</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'bootstrap:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/bootstrap.png' %}" alt="" width="30px">
+                    <span id="title">Bootstrap</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'python:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/python.png' %}" alt="" width="30px">
+                    <span id="title">Python</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'django:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/django.png' %}" alt="" width="30px">
+                    <span id="title">Django</span>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock Contents %}

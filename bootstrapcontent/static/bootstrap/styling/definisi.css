@@ -1,0 +1,51 @@
+@font-face{
+  font-family: 'Quicksand';
+  src: url('../vendor/font/Quicksand/static/Quicksand-Regular.ttf')format('truetype');
+}
+body{
+  position: relative;
+  font-family: 'Quicksand';
+}
+div #article{
+  font-size: 15pt;
+  margin: 150px 80px 100px 20px;
+  text-align: justify;
+  line-height: 35px;
+}
+#article h1{
+  font-weight: bold;
+}
+#article hr{
+  margin-top: -5px;
+}
+#article h3{
+  font-weight: bold;
+  font-size: 19pt;
+}
+/* sidebar */
+.card{
+    margin-right: 50px;
+}
+#sidebar{
+  margin-top: 250px;
+}
+#sidebar h2{
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 20pt;
+}
+#title{
+  font-size: 13pt;
+  text-decoration: none;
+}
+span{
+  margin-left: 10px;
+}
+.list-group-item:visited,
+.list-group-item:focus,
+.list-group-item:hover{
+  border-color: #292b2c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}

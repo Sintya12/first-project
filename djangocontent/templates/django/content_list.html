@@ -1,0 +1,229 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block Title %}
+    Django 1.11 LTS
+{% endblock Title %}
+
+{% block Contents %}
+    <link rel="stylesheet" href="{% static "django/styling/definisi.css" %}">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-lg-7" id="article">
+          <!-- Pengenalan Django -->
+          <h1>Mengenal Dasar Django <sub>1&#46;11 LTS</sub></h1>
+          <hr class="bg-dark mb-5">
+          <img class="mb-5" src="{% static 'img/cover/django.png' %}" alt="cover" width="680px">
+          <p><em>Django merupakan sebuah framework powerfull untuk membuat aplikasi web dengan manggunakan bahasa pemrogramman python&#46;</em></p>
+          <p>Dibuat pada tahun 2003&#44; oleh Adrian Holovaty dan Simon Willison&#46; Mereka awalnya hanya seorang web programmer di sebuah kantor surat kabar di Lawrence Journal-World&#44; Kansa&#44; US&#46;</p>
+          <p>July tahun 2005 dirilis  dan menamai Django yang berasal dari gitaris berkebangsaan Belgia-Perancis bernama Django Reinhart&#44; karena Si andrian ngefans dengan gitaris tersebut&#46;</p>
+
+          <!-- Keuntungan Django -->
+          <h3>Keuntungan dari Django</h3>
+          <!-- ORM -->
+          <h5>Object-Relation Mapping (ORM) Support</h5>
+          <p> Artinya django menyediakan jembatan antara model data dan mesin database&#44; dan mendukung serangkaian besar sistem database termasuk MySQL&#44; Oracle&#44; dll&#46; Django juga mendukung NoSQL database melalui Django-nonrel fork&#46; Untuk saat ini&#44; hanya NoSQL database didukung oleh MongoDB dan google app engine&#46; </p>
+          <!-- Multilingual Support -->
+          <h5>Multilingual Support</h5>
+          <p>Artinya Django mendukung multi-bahasa situs web melalui sistem built-in internasional&#46; Sehingga&#44; kamu dapat mengembangkan web atau program yang akan mendukung beberapa bahsa pemrogramman&#46;</p>
+          <!-- Framework Support -->
+          <h5>Framework Support</h5>
+          <p>Artinya Django memilliki built-in support Ajax&#44; RSS&#44; Caching dan berbagai framework lainnya&#46;</p>
+          <!-- Administration GUI -->
+          <h5>Administration GUI</h5>
+          <p>Artinya django menyediakan ready-to-use user interface yang bagus untuk kegiatan administrasi&#46;</p>
+          <!-- Development Enviroment -->
+          <h5>Development Environment</h5>
+          <p>Artinya django dilengkapi dengan server web ringan untuk memfasilitasi pengembangan aplikasi end-to-end dan pengujian&#46; <br>Referensi &#58; <a href="http://www.kapalomen.com/2016/06/django-framework-web-yang-cepat-dan.html">www&#46;kapalomen&#46;com</a></p>
+
+          <!-- Alur Django -->
+          <h3>Alur Kerja Django</h3>
+          <p>Django mendukung 2 pola alur&#44; yaitu &#58;</p>
+          <!-- MVC -->
+          <h5>Model View Controller &#40;MVC&#41;</h5>
+            <p>Model View Controller atau MVC adalah pola desain perangkat lunak untuk mengembangkan aplikasi web&#46; MVC terdiri dari tiga bagian antara lain &#58;</p>
+            <ul>
+              <li>Model &#58; lowest level dari pola yg bertanggungjawab memelihara data</li>
+              <li>View &#58; bertanggungjawab untuk menampilkan semua
+              atau sebagian data kepada user&#46; </li>
+              <li>Controller &#58; bertanggungjawab untuk merespons input user dan melakukan interaksi pada object model data&#46;</li>
+            </ul>
+            <p class="mt-2">MVC populer karena mendukung kompatibilitas aplikasi dari lapisan interface  user dan support problem separation&#46;</p>
+            <img id="image" src="{% static 'img/property/django/mvc-nonquery.png' %}" alt="">
+            <img id="image" src="{% static 'img/property/django/mvc-query.png' %}" alt="">
+          <!-- MVT -->
+          <h5 class="mt-4 mb-3">Model View Template &#40;MVT&#41;</h5>
+          <p>
+            Sedikit berbeda dengan MVC&#46; Disini perbedaan utama antara kedua django sendiri menangani bagian Controller perangkat lunak yang mengontrol iteraksi antara model dan view&#44; meninggalkan kita dengan template&#46; Template disini ialah file HTML yang dicampur dengan Django Template Language (DTL)&#46;
+          </p>
+          <img id="image" src="{% static 'img/property/django/mvt.png' %}" alt="">
+
+          <!-- Struktur Django -->
+          <h3>Struktur Directory Django </h3>
+          <img id="image" src="{% static 'img/property/django/direktoridjango.png' %}" alt="" width="680px">
+          <!-- base directory -->
+          <h5>Base Directory</h5>
+          <p> Bisa dilihat gambar diatas tabel berwarna biru tua menunjukkan sebuah main folder dengan nama<em>"django_project"</em> ini disebut dengan base directory folder inilah yang akan membungkus projek django dan apps django&#46; <b>Untuk nama folder pada base directory dapat diubah&#46;</b></p>
+          <!-- projek directory -->
+          <h5>Project Directory (Direktori projek)</h5>
+          <p> Projek adalah kumpulan konfigurasi dan beberapa app (aplikasi) untuk suatu website tertentu.</p>
+          <!-- Apps Django -->
+          <h5>Apps Django</h5>
+          <p>Apps adalah suatu aplikasi web yang memiliki fungsi atau tugas tertentu, misal sebagai database atau sebagai aplikasi survei sederhana</p>
+          <!-- static -->
+          <h5>static</h5>
+          <p>Folder static pada django adalah folder yang berisi file-file static yang kita gunakan untuk styling, di antaranya: javascript , css , icon / svg , jquery and stuff. Kita akan menggunakan template yang yang telah tersedia.</p>
+          <!-- templates -->
+          <h5>templates</h5>
+          <p>Folder templates adalah sebuah folder untuk tempat menyimpan file - file dokumen html.</p>
+          <!-- db.sqlite3 -->
+          <h5>db&#46;sqlite3</h5>
+          <p>Merupakan database default django. Jadi&#44; django ini memiliki database bawaan yang bernama
+          db&#46;sqlite versi 3&#46;</p>
+          <!-- manage.py -->
+          <h5>manage&#46;py</h5>
+          <p>Merupakan salah satu core django untuk melakukan operasi seperti migrasi database&#44; menjalankan server&#44; membuat apps&#46;</p>
+
+          <!-- Tools Django -->
+          <h3>Tools </h3>
+          <p>Tools yang perlu dipersiapkan sebelum memulai django antara lain &#58;</p>
+          <div class="row flex mt-5">
+            <div class="col-sm-6 col-md-4">
+              <img class="ml-2" src="{% static 'img/property/django/web browser.png' %}" alt="" width="100px" height="100px">
+              <p class="mt-4 ml-1">Web Browser</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <img src="{% static 'img/property/django/kode editor.png' %}" alt="" width="120px" height="100px">
+              <p class="mt-4 ml-1">Kode Editor</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <img src="{% static 'img/property/django/jaringan internet.png' %}" alt="" width="100px" height="100px">
+              <p class="mt-4">Koneksi Internet</p>
+            </div>
+          </div>
+
+          <!-- Memulai Django -->
+          <h3>Memulai Django</h3>
+          <p>Ini khusus untuk pengguna sistem operasi ubuntu &#49;&#54;&#46;&#48;&#56;&#46;</p>
+          <!-- Install Python -->
+          <h5>&#49;&#46; Install Python</h5>
+          <ul>
+            <li>
+              Kunjungi <a href="http://python.org">website resmi python.org</a>&#44; download file python tersebut&#46; Lalu extra file tersebut&#46;
+            </li>
+            <li class="mt-3">
+              Buka terminal&#44; masuk ke folder yang menyimpan file python dengan memasukkan perintah ini <code codetype="python">&#36; cd Desktop&#47;</code> &#40;Folder yg menyimpan file tersebut&#41;&#46; dan install package yang dibutuhkan dengan memasukkan perintah ini <code codetype="python">&#36; sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-doc libgdbm-dev libc6-dev libbz2-dev</code>&#46;
+            </li>
+            <li class="mt-3">Lalu masukkan beberapa perintah ini &#58;</li>
+            <ul>
+              <ul style="margin-left: -50px; padding-bottom: 10px;">
+                <li style="padding-top: 5px; padding-bottom: 5px;"><code codetype="python">&#36; &#46;&#47;configure</code></li>
+                <li style="padding-bottom: 5px;"><code codetype="python">&#36; make</code></li>
+                <li style="padding-bottom: 5px;"><code codetype="python">&#36; sudo make install</code></li>
+              </ul>
+            </ul>
+            <p>Jika kamu tiba - tiba mendapat notifikasi seperti ini &#58;</p>
+            <pre class="bg-dark p-3"><code class="text-white">&#29; &#36; No Module Named '_ctypes'</code></pre>
+            <p>Lakukan install package <code codetype="python">&#36;  libffi-dev</code> pada synaptic package manager&#46;</p>
+            <li>Setelah berhasil&#44; silakan periksa ulang kembali dengan masukkan perintah ini &#58;</li>
+            <ul>
+              <ul style="margin-left: -50px; padding-bottom: 10px;">
+                <li style="padding-top: 5px; padding-bottom: 5px;"><code codetype="python">&#36; sudo make install</code></li>
+                <li style="padding-bottom: 5px;"><code codetype="python">&#36; which python&#51;&#46;&#55; </code></li>
+                <li style="padding-bottom: 5px;"><code codetype="python">&#36; which pip&#51;&#46;&#55; </code></li>
+              </ul>
+            </ul>
+          </ul>
+          <!-- Buat Virtualenv -->
+          <h5>&#50;&#46; Buat Virtualenv Enviroment Python</h5>
+          <ul style="margin-left: 10px;">
+            <li>Buat virtualenvnya dengan masukan perintah ini <code codetype="python">&#36; python&#51;&#46;&#55; &#45;m venv Env</code> &#40;Nama virtualenv environment pythonnya&#41;&#46;</li>
+            <img id="image" src="{% static 'img/property/django/env-2.png' %}" alt="" width="380px" height="160px">
+            <li>Untuk aktifkan virtualenv <code codetype="python">&#36; source Env&#47;bin&#47;activate</code>&#44; untuk nonaktifkan virtualenv <code codetype="python">&#36; deactivate</code>&#46;</li>
+          </ul>
+          <!-- Install Django -->
+          <h5>&#51;&#46; Install Django &#49;&#46;&#49;&#49; LTS</h5>
+          <p class="ml-4">Dengan cara membuat package manager python &#40;PIP&#41; caraya gini &#58;</p>
+          <ul class="ml-4">
+            <li>Periksa pip <code codetype="python">&#36; pip list</code></li>
+            <li>Lalu perbarui pip <code codetype="python">&#36; pip install &#45;&#45;upgrade</code></li>
+            <li>Install package yang dibutuhkan <code codetype="python">&#36; pip install Django&#61;&#61;&#49;&#46;&#49;&#49;&#46;&#42;</code>&#44; jika sudah berhasil. Periksa kembali dengan <code codetype="python">&#36; pip list</code>&#46;</li>
+          </ul>
+        </div>
+
+        <div class="col-sm-12 col-lg-4" id="sidebar">
+          <div class="card shadow">
+              <div class="card-body">
+                <h2 class="text-center">Artikel Terkait</h2>
+                <ul class="list-group">
+                  {% for content in content_list %}
+                     <a class="text-dark" id="title" href="{% url 'django:content' content.slug %}">
+                      <li class="list-group-item">{{content.title}}</li>
+                    </a>
+                  {% endfor %}
+                </ul>
+              </div>
+          </div>
+
+          <div class="card shadow mt-5">
+            <div class="card-body">
+              <h2 class="text-center">Tutorial Lainnya</h2>
+              <ul class="list-group">
+                <a class="text-dark" id="title" href="{% url 'html:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/html.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">HTML</span>
+                  </li>
+                </a>
+                <a class="text-dark" id="title" href="{% url 'css:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/css.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">CSS</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'js:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/js.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">Javascript</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" id="title" href="{% url 'dom:page' %}">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/dom.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">DOM</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" href="{% url 'bootstrap:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/bootstrap.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">Bootstrap</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" href="{% url 'python:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/python.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">Python</span>
+                  </li>
+                </a>
+
+                <a class="text-dark" href="{% url 'oop:page' %}" id="title">
+                  <li class="list-group-item">
+                    <img src="{% static 'img/logo/oop.png' %}" alt="" width="35px" height="35px">
+                    <span id="title">OOP</span>
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+{% endblock Contents %}

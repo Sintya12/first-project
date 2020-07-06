@@ -1,0 +1,134 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block Title %}
+    CSS
+{% endblock Title %}
+
+{% block page_title %}
+    Mengenal CSS
+{% endblock page_title %}
+
+{% block Contents %}
+    <link rel="stylesheet" href="{% static "css/styling/definisi.css" %}">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-12 col-lg-7" id="article">
+          <h1>Mengenal Dasar CSS</h1>
+          <hr class="bg-dark mb-5">
+
+          <img class="mb-5" src="{% static 'img/cover/css.png' %}" alt="cover">
+
+          <div class="mt-5">
+            <p><i>"CSS adalah kumpulan kode yangan digunakan untuk mendefinisikan desaign dari bahasa markup, salah satunya HTML."</i></p>
+            <p> Singkatnya dengan menggunakan CSS kita dapat dengan mudah secara keseluruhan mengubah tampilan halaman web sesuai keinginan kita. File pada CSS berekstensi .css.</p>
+            <p>Sejarah singkat, Nama CSS didapat dari fakta bahwa setiap deklarasi style yang berbeda dapat diletakkan secara berurutan, yang kemudian membentuk hubungan <b>ayah-anak (parent-child)</b> pada setiap style.</p>
+            <p>CSS sendiri merupakan sebuah teknologi internet yang direkomendasikan oleh World Wide Web Consortium atau W3C pada tahun 1996. Setelah CSS distandardisasikan, Internet Explorer dan Netscape melepas browser terbaru mereka yang telah sesuai atau paling tidak hampir mendekati dengan standar CSS. <br>Jika ingin mengetahui lebih spesifik lagi tentang CSS silahkan kunjungi website resminya di <a href="https://www.w3.org/Style/CSS/">https://www.w3.org/Style/CSS/</a></p>
+
+            <h2 class="mt-5 mb-3">Penggunaan Kode CSS</h2>
+            <p>CSS datang bersama dengan HTML tag. Untuk menginputkan kode css 3 metode antara lain :</p>
+
+            <!-- Metode Inline Style -->
+            <h3>1. Metode Inline Style</h3>
+            <p style="margin: 0px 10px 0px 25px;">Cara menginputkan sebuah kode CSS secara langsung ke dalam tag html dg menggunakan atribut. <br><br>inline.html</p>
+
+              <pre data-codetype="HTML"><code>&lt;!DOCTYPE html&gt;<br> &lt;html&gt;<br>  &lt;head&gt;<br>   &lt;title&gt;Metode Inline CSS&lt;/title&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>   &lt;p style="color: red; font-family: monospace; font-size: 20px;"&gt;<br>     Paragraf ini menggunakan metode inline style css <br>   &lt;/p&gt; <br>  &lt;/body&gt; <br> &lt;/html&gt;</code></pre>
+
+            <p style="margin: 0px 10px 0px 25px;">Output yang dihasilkan :</p>
+            <img id="image" src="{% static 'img/property/css/inline.png' %}" alt="">
+
+            <!-- Metode Internal CSS -->
+            <h3>2.  Metode Internal CSS</h3>
+            <p style="margin: 0px 10px 0px 25px;">Disebut juga <em>Embedded Stylesheet</em> digunakan untuk memisahkan kode  css dari tag HTML. Kekurangan dari metode ini ialah jika ingin membuat beberapa halaman dan tampilan yang sama, maka setiap halaman akan memiliki kode CSS yang sama juga.<br>Contoh :<br><br>internal.html</p>
+
+              <pre data-codetype="HTML"><code>&lt;!DOCTYPE html&gt;<br> &lt;html&gt;<br>  &lt;head&gt;<br>   &lt;title&gt;Metode Internal CSS&lt;/title&gt;<br>   &lt;style type="text/css"&gt; <br>    p{<br>     color: blue;<br>     font-family: arial;<br>     font-size: 20px;<br>    }<br>   &lt;/style&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>   &lt;p&gt;Paragraf ini menggunakan metode internal css&lt;/p&gt;<br>  &lt;/body&gt; <br> &lt;/html&gt;</code></pre>
+
+            <p style="margin: 0px 10px 0px 25px;">Output yang dihasilkan :</p>
+            <img id="image" src="{% static 'img/property/css/internal.png' %}" alt="">
+
+            <!-- Metode Eksternal CSS -->
+            <h3>3.  Metode Eksternal CSS</h3>
+            <p style="margin: 0px 10px 0px 25px;">Digunakan untuk <em>"mengangkat"</em> kode CSS tsb ke dalam sebuah file tersendiri yang terpisah sepenuhnya dari halaman HTML.<br>Contoh :<br><br>eksternal.html</p>
+
+              <pre data-codetype="HTML"><code>&lt;!DOCTYPE html&gt;<br> &lt;html&gt;<br>  &lt;head&gt;<br>   &lt;title&gt;Metode Internal&lt;/title&gt;<br>   &lt;!-- atau bisa juga menggunakan tag @import url(…) --&gt;<br>   &lt;style type="text/css"&gt; <br>    h1{<br>     @import url(css/styles.css);<br>    }<br>   &lt;/style&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>   &lt;p&gt;Paragraf ini menggunakan metode eksternal css&lt;/p&gt;<br>  &lt;/body&gt; <br> &lt;/html&gt;</code></pre>
+
+            <p style="margin: 0px 10px 0px 35px;">styles.css</p>
+
+              <pre data-codetype="CSS"><code>h1{<br> color: green;<br> font-family: sans-serif;<br> font-size: 20px;<br>}</code></pre>
+
+            <p style="margin: 0px 10px 0px 25px;">Output yang dihasilkan :</p>
+            <img id="image" src="{% static 'img/property/css/eksternal.png' %}" alt="">
+          </div>
+      </div>
+
+      <div class="col-sm-12 col-lg-4" style="margin-top: 200px;" id="sidebar">
+        <div class="card shadow">
+            <div class="card-body">
+              <h2 class="text-center">Artikel Terkait</h2>
+              <ul class="list-group">
+                {% for content in content_list  %}
+                  <a href="{% url 'css:content' content.slug %}" class="text-dark" id="title">
+                    <li class="list-group-item" id="title">{{content.title}}</li>
+                  </a>
+                {% endfor %}
+              </ul>
+            </div>
+        </div>
+
+        <div class="card shadow mt-5">
+          <div class="card-body">
+            <h2 class="text-center">Tutorial Lainnya</h2>
+            <ul class="list-group">
+              <a class="text-dark" id="title" href="{% url 'html:page' %}">
+                <li class="list-group-item">
+                  <img src="{% static 'img/logo/html.png' %}" alt="" width="30px">
+                  <span id="title">HTML</span>
+                </li>
+              </a>
+              <a class="text-dark" id="title" href="{% url 'js:page' %}">
+                <li class="list-group-item">
+                  <img src="{% static 'img/logo/js.png' %}" alt="" width="30px">
+                  <span id="title">Javascript</span>
+                </li>
+              </a>
+              <a class="text-dark" id="title" href="{% url 'dom:page' %}">
+                <li class="list-group-item">
+                  <img src="{% static 'img/logo/dom.png' %}" alt="" width="30px">
+                  <span id="title">DOM</span>
+                </li>
+              </a>
+              <a class="text-dark" id="title" href="{% url 'bootstrap:page' %}">
+                <li class="list-group-item">
+                  <img src="{% static 'img/logo/bootstrap.png' %}" alt="" width="30px">
+                  <span id="title">Bootstrap</span>
+                </li>
+              </a>
+              <a class="text-dark" id="title" href="{% url 'python:page' %}">
+                <li class="list-group-item">
+                  <img src="{% static 'img/logo/python.png' %}" alt="" width="30px">
+                  <span id="title">Python</span>
+                </li>
+              </a>
+              <a class="text-dark" id="title" href="{% url 'oop:page' %}">
+                <li class="list-group-item">
+                  <img src="{% static 'img/logo/oop.png' %}" alt="" width="30px">
+                  <span id="title">OOP</span>
+                </li>
+              </a>
+              <a class="text-dark" id="title" href="{% url 'django:page' %}">
+                <li class="list-group-item">
+                  <img src="{% static 'img/logo/django.png' %}" alt="" width="30px">
+                  <span id="title">Django</span>
+                </li>
+              </a>
+            </ul>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+{% endblock Contents %}
