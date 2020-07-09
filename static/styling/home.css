@@ -1,0 +1,95 @@
+@font-face{
+  font-family: 'Quicksand';
+  src: url('../vendor/font/Quicksand/static/Quicksand-Medium.ttf')format('truetype');
+}
+body{
+  position: relative;
+  font-family: 'Quicksand';
+}
+.jumbotron{
+  background-color: #ffff;
+}
+#logo{
+  font-size: 15pt;
+  font-weight: bold;
+  background-color: #292b2c;
+  color: yellow;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar nav{
+  height: 70px;
+}
+nav ul{
+  position: relative;
+}
+nav ul li{
+  font-size: 13pt;
+  font-weight: bold;
+  text-shadow: 2px solid black;
+}
+nav .nav-link:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.jumbotron .title{
+  font-size: 40pt;
+  font-weight: bold;
+  padding: 200px 0px 20px 30px;
+  text-align: center;
+  font-family: 'Quicksand-bold';
+}
+.jumbotron .text{
+  font-size: 18pt;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .10);
+}
+.jumbotron a{
+  border: 2px solid black;
+  font-size: 14pt;
+  margin-top: 30px;
+  position: relative;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .10);
+}
+.jumbotron .btn:hover, :visited{
+  box-shadow: 0 2px 4px 0 gray;
+  font-weight: bold;
+}
+/* Blog */
+.card{
+  border: none;
+}
+.card:hover{
+  box-shadow: 0 4px 4px 0 gray;
+  -ms-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  transition: 0.4s;
+}
+#title{
+  text-decoration: none;
+  font-size: 11pt;
+}
+#title:hover{
+  text-decoration: underline 1px solid black;
+  font-weight: bold;
+}
+.card-title{
+  font-weight: bold;
+}
+footer{
+  background-color: #292b2c;
+  color: #ffff;
+  font-size: 13pt;
+  margin-top: 100px;
+  padding: 2px;
+}
+footer a{
+  color: #ffff;
+  text-decoration: none;
+}
+footer a:hover{
+  color: #ffff;
+  font-weight: bold;
+  text-decoration: none;
+}

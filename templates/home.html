@@ -31,7 +31,7 @@
           <div class="card-deck" id="blog" style="width: 95%;" >
             {% for content in latest_content %}
               <div class="card">
-                <a href="{% url 'blog:content' content.slug %}"><img class="card-img-top img-responsive" src="{{content.cover.url}}" alt="Card image cap" width="500px" height="170"></a>
+                <a href="{% url 'blog:content' content.slug %}"><img class="card-img-top img-responsive" src="{{content.cover.url}}" alt="Card image cap" height="250px" height="170"></a>
                 <div class="card-body mt-3">
                   <a id="title" href="{% url 'blog:content' content.slug %}">
                     <h5 class="card-title text-dark">{{content.title}}</h5>

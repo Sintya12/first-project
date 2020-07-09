@@ -1,0 +1,53 @@
+@font-face{
+  font-family: 'Quicksand';
+  src: url('../vendor/font/Quicksand/static/Quicksand-Regular.ttf')format('truetype');
+}
+body{
+  position: relative;
+  font-family: 'Quicksand';
+}
+#logo{
+  font-size: 15pt;
+  font-weight: bold;
+  background-color: #292b2c;
+  color: yellow;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar nav{
+  height: 70px;
+}
+nav ul{
+  position: relative;
+}
+nav ul li{
+  font-size: 13pt;
+  font-weight: bold;
+}
+nav .nav-link:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.jumbotron-fluid{
+  margin-top: 230px;
+}
+h4{
+  padding: 50px;
+}
+.card-footer{
+  font-size: 17pt;
+  font-weight: bold;
+}
+.text-dark:hover{
+  font-weight: lighter;
+}
+.img-responsive{
+  margin-bottom: 35px;
+}
+.img-responsive:visited,
+.img-responsive:hover{
+  -ms-transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  transform: scale(1.07);
+  transition: 0.5s;
+}
