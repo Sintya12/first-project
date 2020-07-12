@@ -17,45 +17,38 @@
   <body>
     {% include "snippets/nav.html" %}
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 col-lg-8" style="margin: 0 auto;">
-          <div class="jumbotron jumbotron-fluid" style="height: 600px;">
-            <!--JUMBROTON HOME---->
-              <h1 class="title">Tutorial Bagi Pemula</h1>
-              <h3 class="text">Memuat dasar bahasa pemogramman html, css, javascript, python.</h3>
-              <a class="btn bnt-default" href="{% url 'tutorial' %}" role="buttton">Belajar</a>
-          </div>
+    <div class="jumbotron jumbotron-fluid" style="height: 600px;">
+      <!--JUMBROTON HOME---->
+        <div class="container">
+          <h1 class="title display-4">Tutorial Bagi Pemula</h1>
+          <h3 class="lead display-5 text-center">Memuat dasar bahasa pemogramman html, css, javascript, python.</h3>
+          <p class="lead" style="margin-left: 21%;">
+            <a class="btn btn-default btn-md" href="{% url 'tutorial' %}" role="button">Belajar</a>
+          </p>
         </div>
-        <div class="col-sm-12 col-lg-12" style="margin: 50px;height: 500px;">
-          <div class="card-deck" id="blog" style="width: 95%;" >
-            {% for content in latest_content %}
-              <div class="card">
-                <a href="{% url 'blog:content' content.slug %}"><img class="card-img-top img-responsive" src="{{content.cover.url}}" alt="Card image cap" height="250px" height="170"></a>
-                <div class="card-body mt-3">
-                  <a id="title" href="{% url 'blog:content' content.slug %}">
-                    <h5 class="card-title text-dark">{{content.title}}</h5>
-                    <p class="card-text text-dark">{{content.content|truncatewords:15}}</p>
-                  </a>
-                </div>
-              </div>
-            {% endfor %}
+    </div>
+
+    <div class="container  mb-5" style="height: 700px;">
+      <div class="card-deck">
+        {% for content in latest_content %}
+          <div class="card mx-auto">
+            <a href="{% url 'blog:content' content.slug %}"><img class="card-img-top" src="{{content.cover.url}}" alt="Card image cap"></a>
+            <div class="card-body">
+              <a id="title" href="{% url 'blog:content' content.slug %}">
+                <h5 class="card-title text-dark">{{content.title}}</h5>
+                <p class="card-text text-dark">{{content.content|truncatewords:15}}</p>
+              </a>
+            </div>
           </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
-    <footer class="page-footer font-small blue">
-      <div class="footer-copyright text-center py-3">&copy; 2020
+
+    <footer class="page-footer font-small">
+      <div class="container text-center py-3">&copy; 2020
         <a href="{% url 'home'%}"> tunaskode.com</a>
       </div>
     </footer>
-
-
-
-
-
-
-
     <!-- FILE BOOTSTRAP -->
     {% include "snippets/scripts.html" %}
 
