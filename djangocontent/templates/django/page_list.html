@@ -27,7 +27,7 @@
           {% for content in content_list  %}
             <div class="card shadow">
               <div class="card-body">
-                <a href="#" class="text-dark" id="title">{{content.title}}</a>
+                <a href="{% url 'django:content' content.slug %}" class="text-dark" id="title">{{content.title}}</a>
               </div>
             </div>
           {% endfor %}

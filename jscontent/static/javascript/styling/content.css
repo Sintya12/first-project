@@ -150,10 +150,6 @@ pre .tex .formula {background: #073642;}
   margin-bottom: 20px;
   font-size: 20pt;
 }
-.text-center:hover{
-  font-weight: lighter;
-  transition: 0.3s;
-}
 #title{
   font-size: 13pt;
   text-decoration: none;
