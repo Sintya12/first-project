@@ -8,18 +8,15 @@ body{
 }
 div #article{
   font-size: 15pt;
-  margin: 150px 60px 100px 20px;
   text-align: justify;
   line-height: 35px;
 }
-#article h1{
-  font-weight: bold;
+#article .card{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #article hr{
   margin-top: -5px;
-}
-#article h3{
-  font-weight: bold;
 }
 /* CODE */
 pre,i[rel="pre"] {
@@ -141,15 +138,15 @@ pre .tex .formula {background: #073642;}
 }
 /* sidebar */
 .card{
-  margin-right: 30px;
+  margin-right: 50px;
+  margin-left: 30px;
 }
 #sidebar{
-  margin-top: 250px;
+  margin-top: 50px;
 }
-#sidebar h2{
+.text-center{
   font-weight: bold;
   padding-bottom: 10px;
-  font-size: 20pt;
 }
 #title{
   font-size: 13pt;
@@ -158,8 +155,6 @@ pre .tex .formula {background: #073642;}
 span{
   margin-left: 10px;
 }
-.list-group-item:visited,
-.list-group-item:focus,
 .list-group-item:hover{
   border-color: #292b2c;
   font-weight: bold;

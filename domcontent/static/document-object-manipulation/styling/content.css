@@ -8,12 +8,12 @@ body{
 }
 div #article{
   font-size: 15pt;
-  margin: 100px 80px 100px 20px;
   line-height: 35px;
   text-align: justify;
 }
-#article h1{
-  font-weight: bold;
+#article .card{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #article hr{
@@ -146,15 +146,11 @@ pre .tex .formula {background: #073642;}
 /* sidebar */
 #sidebar .card{
   margin-right: 50px;
+  margin-left: 30px;
 }
 .text-center{
   font-weight: bold;
   margin-bottom: 20px;
-  font-size: 20pt;
-}
-.text-center:hover{
-  font-weight: lighter;
-  transition: 0.3s;
 }
 #title{
   font-size: 13pt;
@@ -163,8 +159,6 @@ pre .tex .formula {background: #073642;}
 span{
   margin-left: 10px;
 }
-.list-group-item:visited,
-.list-group-item:focus,
 .list-group-item:hover{
   border-color: #292b2c;
   font-weight: bold;

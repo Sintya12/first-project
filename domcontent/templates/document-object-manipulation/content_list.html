@@ -7,44 +7,48 @@
 
 {% block Contents %}
     <link rel="stylesheet" href="{% static "document-object-manipulation/styling/definisi.css" %}">
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
 
-        <div class="col-sm-12 col-lg-7" id="article">
-          <h1>Mengenal Document Object Model (DOM)</h1>
-          <hr class="bg-dark mb-5">
-          <img class="mb-5" src="{% static 'img/cover/dom.png' %}" alt="cover">
-          <div class="mt-5">
-            <p>Sebuah objek dokumen mewakili dokumen HTML yang ditampilkan dihalaman web.</p>
-            <p>Bagaimana caranya ?</p>
-            <p> Kita dapat menghubungkan antara elemen html dengan dokumen. Sehingga, kita dapat membuat seluruh komponen dari halaman html tersebut dapat diakses dan dimanipulasi. komponen tersebut seperti elemen HTML, atribut, teks, dll.</p>
-            <p>Nah, cara konten dokumen diakses dan dimanipulasi inilah yang disebut <b>Document Object Model &#40;DOM&#41;</b>.</p>
-            <p><em> "Untuk representasi dari elemen dokumen web dalam bentuk sebuah pohon ini disebut <b>DOM Tree</b>".</em></p>
-            <h3 class="mt-5 mb-3">Struktur Hierarki DOM Tree</h3>
-            <ul>
-              <li>Root node    : node yang menjadi sumber dari diri semua lain di dalam DOM.</li>
-              <li>Parent node : node yang berada 1 tingkat diatas node yg lain.</li>
-              <li>Child node   :  node yang berada 1 tingkat dibawah node lain.</li>
-            </ul>
-            <p>Contoh :</p>
+        <div class="col-sm-12 col-lg-8 mb-5" id="article">
+          <div class="card" style="border: none;">
+            <div class="card-body">
+              <h2 class="card-title" style="font-weight: bold;">Mengenal DOM</h2>
+              <hr class="bg-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/cover/dom.png' %}" alt="cover" width="780px">
+              <div class="card-text">
+                <p>Sebuah objek dokumen mewakili dokumen HTML yang ditampilkan dihalaman web.</p>
+                <p>Bagaimana caranya ?</p>
+                <p> Kita dapat menghubungkan antara elemen html dengan dokumen. Sehingga, kita dapat membuat seluruh komponen dari halaman html tersebut dapat diakses dan dimanipulasi. komponen tersebut seperti elemen HTML, atribut, teks, dll.</p>
+                <p>Nah, cara konten dokumen diakses dan dimanipulasi inilah yang disebut <b>Document Object Model &#40;DOM&#41;</b>.</p>
+                <p><em> "Untuk representasi dari elemen dokumen web dalam bentuk sebuah pohon ini disebut <b>DOM Tree</b>".</em></p>
+                <h3 class="mt-5 mb-3">Struktur Hierarki DOM Tree</h3>
+                <ul>
+                  <li>Root node    : node yang menjadi sumber dari diri semua lain di dalam DOM.</li>
+                  <li>Parent node : node yang berada 1 tingkat diatas node yg lain.</li>
+                  <li>Child node   :  node yang berada 1 tingkat dibawah node lain.</li>
+                </ul>
+                <p>Contoh :</p>
 
-              <pre data-codetype="HTML"><code>&lt;html&gt;<br> &lt;head&gt;<br>  &lt;title>DOM Tree&lt;&#47;title&gt;<br> &lt;&#47;head&gt;<br> &lt;body&gt;<br>  &lt;h1&gt;Hello World&lt;&#47;h1&gt;<br>  &lt;p&gt;Paragraf 1&lt;&#47;p&gt;<br>  &lt;div&gt; <br>   &lt;p&gt;Paragraf 2&lt;&#47;p&gt;<br>  &lt;&#47;div&gt;<br>  &lt;a href ="halaman2.html"&gt;ke Halaman 2&lt;&#47a&gt; <br> &lt;&#47;body&gt;<br>&lt;&#47html&gt;</code></pre>
+                  <pre data-codetype="HTML"><code>&lt;html&gt;<br> &lt;head&gt;<br>  &lt;title>DOM Tree&lt;&#47;title&gt;<br> &lt;&#47;head&gt;<br> &lt;body&gt;<br>  &lt;h1&gt;Hello World&lt;&#47;h1&gt;<br>  &lt;p&gt;Paragraf 1&lt;&#47;p&gt;<br>  &lt;div&gt; <br>   &lt;p&gt;Paragraf 2&lt;&#47;p&gt;<br>  &lt;&#47;div&gt;<br>  &lt;a href ="halaman2.html"&gt;ke Halaman 2&lt;&#47a&gt; <br> &lt;&#47;body&gt;<br>&lt;&#47html&gt;</code></pre>
 
-            <p>Struktur Hierarki yang dihasilkan yaitu :</p>
-            <!-- <img class="dom shadow" src="{% static 'img/property/dom_tree.png' %}" alt="" width="780px" height="480px"> -->
-            <p>Jenis Node :</p>
-            <ul>
-              <li><b>Nodelist</b>		: daftar node yang mengandung tipe node apapun.</li>
-              <li><b>HTMLCollection </b>	: daftar node yang hanya mengandung tipe node element.</li>
-            </ul>
-            <p><b>HTML Collection</b> selalu digunakan ketika akses harus diberikan ke beberapa node. <br> <br>Misalnya, kebanyakan metode pemilih (seperti, getElementById) mengembalikan beberapa node atau mendapatkan referensi <em>(sumber)</em> ke semua anak <em>(child)</em>. Sebuah HTMLCollection yang menyediakan metode yang sama dengan nodelist, disebut  <em>NamedItem</em> . </p>
+                <p>Struktur Hierarki yang dihasilkan yaitu :</p>
+                <img class="img-fluid" src="{% static 'img/property/dom/tree.png' %}" alt="">
+                <p>Jenis Node :</p>
+                <ul>
+                  <li><b>Nodelist</b>		: daftar node yang mengandung tipe node apapun.</li>
+                  <li><b>HTMLCollection </b>	: daftar node yang hanya mengandung tipe node element.</li>
+                </ul>
+                <p><b>HTML Collection</b> selalu digunakan ketika akses harus diberikan ke beberapa node. <br> <br>Misalnya, kebanyakan metode pemilih (seperti, getElementById) mengembalikan beberapa node atau mendapatkan referensi <em>(sumber)</em> ke semua anak <em>(child)</em>. Sebuah HTMLCollection yang menyediakan metode yang sama dengan nodelist, disebut  <em>NamedItem</em> . </p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="col-sm-12 col-lg-4" id="sidebar">
           <div class="card shadow">
               <div class="card-body">
-                <h2 class="text-center">Artikel Terkait</h2>
+                <h3 class="text-center">Artikel Terkait</h3>
                 <ul class="list-group">
                   {% for content in content_list %}
                       <a class="text-dark" id="title" href="{% url 'dom:content' content.slug %}">
@@ -54,9 +58,9 @@
                 </ul>
               </div>
           </div>
-          <div class="card shadow mt-5">
+          <div class="card shadow mt-5 mb-5">
             <div class="card-body">
-              <h2 class="text-center">Tutorial Lainnya</h2>
+              <h3 class="text-center">Tutorial Lainnya</h3>
               <ul class="list-group">
                 <a class="text-dark" id="title" href="{% url 'html:page' %}">
                   <li class="list-group-item">

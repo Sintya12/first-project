@@ -7,8 +7,8 @@
 
 {% block page_title %}
     <div class="jumbotron-fluid ml-5">
-      <h1 class="display-3 text-dark">Bootstrap</h1>
-      <h1 class="text-dark mb-5">Tutorial bagi para pemula</h1>
+      <h1 class="display-4 text-dark">Bootstrap</h1>
+      <h2 class="text-dark mb-5">Tutorial bagi para pemula</h2>
     </div>
 {% endblock page_title %}
 
@@ -18,20 +18,24 @@
     <div class="container-fluid">
       <div class="row">
 
-        <div class="col-sm-12 col-lg-8 "  style="margin-bottom: 200px;" id="article">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="{% url 'bootstrap:definisi' %}" class="text-dark" id="title">Mengenal Bootstrap</a>
-            </div>
-          </div>
-          {% for content in content_list  %}
+        <div class="col-sm-12 col-lg-8"  style="margin-bottom: 200px;" id="article">
+          <div class="col-sm">
             <div class="card shadow">
               <div class="card-body">
-                <a href="{% url 'bootstrap:content' content.slug %}" class="text-dark" id="title">{{content.title}}</a>
+                <a href="{% url 'bootstrap:definisi' %}" class="text-dark" id="title">Mengenal Bootstrap</a>
               </div>
             </div>
-          {% endfor %}
-        </div>
+          </div>
+          <div class="col-sm">
+            {% for content in content_list  %}
+              <div class="card shadow">
+                <div class="card-body">
+                  <a href="{% url 'bootstrap:content' content.slug %}" class="text-dark" id="title">{{content.title}}</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          </div>
 
         <div class="col-sm-12 col-lg-4" id="sidebar">
           <div class="card shadow">

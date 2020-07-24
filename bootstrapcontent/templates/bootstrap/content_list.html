@@ -8,61 +8,63 @@
 
 {% block Contents %}
     <link rel="stylesheet" href="{% static "bootstrap/styling/definisi.css" %}">
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
 
-        <div class="col-sm-12 col-lg-7" id="article">
-          <h1>Mengenal Dasar Bootstrap 4</h1>
-          <hr class="bg-dark mb-5">
-          <img class="mb-5" src="{% static 'img/cover/bootstrap.png' %}" alt="">
-          <div class="mt-4">
-            <p><i>"Bootstrap adalah sebuah library framework CSS yg cukup populer bagi kalangan web developer, dibuat khusus untuk bagian pengembangan front-end website."</i></p>
-            <p>Bootstrap menyediakan kumpulan komponen class interface dasar yg telah dirancang untuk menciptakan tampilan yang menarik, bersih dan ringan. Dia juga memiliki fitur Grid12 kolom, glyphicon, Bootstrap CSS, komponen Javascript, typography dan komponen lainnya yg bersifat siap pakai. </p>
-            <p>Salah satu contoh website besar yang menggunakan framework bootstrap ialah twitter, inteface twitter di bangun dengan menggunakan bootstrap. Karena sebenarnya bootstrap dikembangkan oleh developer twitter sendiri, sehingga sering disebut “twitter bootstrap”. </p>
-            <p>Bootstrap bersifat open source dan menggunakan library dependency  seperti HTML5, CSS3, dan jQuery.</p>
+        <div class="col-sm-12 col-lg-8" id="article">
+          <div class="card" style="border: none;">
+            <div class="card-body">
+              <h2 class="card-title" style="font-weight: bold;">Mengenal Dasar Bootstrap 4</h2>
+              <hr class="bg-dark mb-5">
+              <img class="img-fluid mb-5" src="{% static 'img/cover/bootstrap.png' %}" alt="">
+              <p><i>"Bootstrap adalah sebuah library framework CSS yg cukup populer bagi kalangan web developer, dibuat khusus untuk bagian pengembangan front-end website."</i></p>
+              <p>Bootstrap menyediakan kumpulan komponen class interface dasar yg telah dirancang untuk menciptakan tampilan yang menarik, bersih dan ringan. Dia juga memiliki fitur Grid12 kolom, glyphicon, Bootstrap CSS, komponen Javascript, typography dan komponen lainnya yg bersifat siap pakai. </p>
+              <p>Salah satu contoh website besar yang menggunakan framework bootstrap ialah twitter, inteface twitter di bangun dengan menggunakan bootstrap. Karena sebenarnya bootstrap dikembangkan oleh developer twitter sendiri, sehingga sering disebut “twitter bootstrap”. </p>
+              <p>Bootstrap bersifat open source dan menggunakan library dependency  seperti HTML5, CSS3, dan jQuery.</p>
 
-            <h2 class="mt-4 mb-3">Sejarah Singkat Bootstrap</h2>
-            <p>Diciptakan di Twitter oleh Mark otto (@mdo) dan jacob (@fat) pada pertengahan 2010. Sebelum menjadi framework open source, bootstrap dikenal sebagai twitter blueprint.</p>
-            <p>Awal dirilis pada 19  Agustus 2011 dan telah memiliki lebih dari dua puluh rilisan. Pada versi 2, adanya penambahan fungsionalitas responsif terhadap seluruh framework sebagai stylesheet opsional.</p>
-            <p>Lalu, disempurnakan lagi pada versi 3. Kemudian bootstrap mengembangkan lagi dan rilis versi Alpha5 yang digunakan saat ini yang menjadi salah satu framework front-end paling populer dan proyek open source di dunia.</p>
+              <h2 class="mt-4 mb-3">Sejarah Singkat Bootstrap</h2>
+              <p>Diciptakan di Twitter oleh Mark otto (@mdo) dan jacob (@fat) pada pertengahan 2010. Sebelum menjadi framework open source, bootstrap dikenal sebagai twitter blueprint.</p>
+              <p>Awal dirilis pada 19  Agustus 2011 dan telah memiliki lebih dari dua puluh rilisan. Pada versi 2, adanya penambahan fungsionalitas responsif terhadap seluruh framework sebagai stylesheet opsional.</p>
+              <p>Lalu, disempurnakan lagi pada versi 3. Kemudian bootstrap mengembangkan lagi dan rilis versi Alpha5 yang digunakan saat ini yang menjadi salah satu framework front-end paling populer dan proyek open source di dunia.</p>
 
-            <h3 class="mt-4 mb-3">Kelebihan dan Kekurangan Bootstrap 4</h3>
-            <p>Kelebihan :</p>
-            <ul>
-              <li>Dapat mempercepat waktu proses pembuatan front-end website.</li>
-              <li>Tampilan yang cukup terlihat modern.</li>
-              <li>Tampilan sudah responsive sehingga mendukung segala resolusi, baik itu PC, tablet dan juga smartphone.</li>
-              <li>Website menjadi sangat ringan ketika diakses karena bootstrap dibuat dengan sangat terstruktur.</li>
-              <li>Dibangun dengan LESS (Lenear Style Sheet).</li>
-              <li>Teknologi CSS yang sederhana dan mudah digunakan.</li>
-              <li>Kita bisa mengakses dengan mudah informasi dengan fungsi warna, variabel, dan operasi penggunaan.</li>
-            </ul>
-            <p>Kekurangan :</p>
-            <ul>
-              <li>Minim gambar karena bootstrap 4 menggunakan CSS versi 3.</li>
-              <li>Membuat kita menjadi kurang kreatif karena bergantung dengan coding yang dikembangkan oleh developer.</li>
-            </ul>
+              <h3 class="mt-4 mb-3">Kelebihan dan Kekurangan Bootstrap 4</h3>
+              <p>Kelebihan :</p>
+              <ul>
+                <li>Dapat mempercepat waktu proses pembuatan front-end website.</li>
+                <li>Tampilan yang cukup terlihat modern.</li>
+                <li>Tampilan sudah responsive sehingga mendukung segala resolusi, baik itu PC, tablet dan juga smartphone.</li>
+                <li>Website menjadi sangat ringan ketika diakses karena bootstrap dibuat dengan sangat terstruktur.</li>
+                <li>Dibangun dengan LESS (Lenear Style Sheet).</li>
+                <li>Teknologi CSS yang sederhana dan mudah digunakan.</li>
+                <li>Kita bisa mengakses dengan mudah informasi dengan fungsi warna, variabel, dan operasi penggunaan.</li>
+              </ul>
+              <p>Kekurangan :</p>
+              <ul>
+                <li>Minim gambar karena bootstrap 4 menggunakan CSS versi 3.</li>
+                <li>Membuat kita menjadi kurang kreatif karena bergantung dengan coding yang dikembangkan oleh developer.</li>
+              </ul>
 
-            <h3 class="mt-4 mb-3">Persiapan Memulai Bootstrap</h3>
-            <ul>
-              <li>Download file distribusi Bootstrap di <a href="https://getbootstrap.com/">https://getbootstrap.com/</a>, extract file tsb. Lalu install, ada 3 perintah untuk install bootstrap :
-                <ol class="mt-2" style="font-family: monospace; font-size: 17px;">
-                  <li>$ bower install bootstrap</li>
-                  <li>npm install bootstrap </li>
-                  <li>composer require twbs/bootstrap</li>
-                </ol>
-              </li>
-              <li class="mt-2">Download jQuery dan popper library, karna bootstrap tidak menyertakan file tersebut didalamnya.</li>
-              <li>Pastikan memiliki code editor.</li>
-              <li>Paham tentang dasar HTML, CSS dan Javascript.</li>
-            </ul>
+              <h3 class="mt-4 mb-3">Persiapan Memulai Bootstrap</h3>
+              <ul>
+                <li>Download file distribusi Bootstrap di <a href="https://getbootstrap.com/">https://getbootstrap.com/</a>, extract file tsb. Lalu install, ada 3 perintah untuk install bootstrap :
+                  <ol class="mt-2" style="font-family: monospace; font-size: 17px;">
+                    <li>$ bower install bootstrap</li>
+                    <li>npm install bootstrap </li>
+                    <li>composer require twbs/bootstrap</li>
+                  </ol>
+                </li>
+                <li class="mt-2">Download jQuery dan popper library, karna bootstrap tidak menyertakan file tersebut didalamnya.</li>
+                <li>Pastikan memiliki code editor.</li>
+                <li>Paham tentang dasar HTML, CSS dan Javascript.</li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="col-sm-12 col-lg-4" id="sidebar">
           <div class="card shadow">
               <div class="card-body">
-                <h2 class="text-center">Artikel Terkait</h2>
+                <h4 class="text-center">Artikel Terkait</h4>
                 <ul class="list-group">
                   {% for content in content_list %}
                      <a class="text-dark" id="title" href="{% url 'bootstrap:content' content.slug %}">
@@ -75,7 +77,7 @@
 
           <div class="card shadow mt-5 mb-5">
             <div class="card-body">
-              <h2 class="text-center">Tutorial Lainnya</h2>
+              <h4 class="text-center">Tutorial Lainnya</h4>
               <ul class="list-group">
                 <a class="text-dark" id="title" href="{% url 'html:page' %}">
                   <li class="list-group-item">

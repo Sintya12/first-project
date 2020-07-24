@@ -8,7 +8,7 @@
 {% block page_title %}
   <div class="jumbotron-fluid ml-5 mr-5">
     <div class="card shadow">
-        <h4 class="text-center display-4" style="font-weight: bold;">Ingin belajar apa hari ini ?</h4>
+        <h1 class="text-center p-5 display-4" style="font-weight: bold;">Ingin belajar apa hari ini ?</h1>
     </div>
   </div>
 
@@ -17,74 +17,90 @@
 {% block Contents %}
   <link rel="stylesheet" href="{% static "styling/index.css" %}">
   <div class="container my-5">
-    <div class="row row-cols-md-4 row-cols-sm-3 row-cols-2 d-flex justify-content-between" style="margin-bottom: 250px;">
-      <div class="col">
-        <div class="text-center mb-5 mt-5 p-4 rounded">
+    <div class="row row-cols-md-2 row-cols-sm-3 row-cols-2 d-flex justify-content-between" style="margin-bottom: 250px;">
+      <div class="col-md-3 mb-5 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;"  href="{% url 'html:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/html.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/html.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">HTML</div>
           </a>
         </div>
       </div>
 
-      <div class="col">
-        <div class="text-center mb-5 mt-5 p-4 rounded">
+      <div class="col-md-3 mb-5 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;" href="{% url 'css:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/css.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/css.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">CSS</div>
           </a>
         </div>
       </div>
 
-      <div class="col">
-        <div class="text-center mb-5 mt-5 p-4 rounded">
+      <div class="col-md-3 mb-5 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;" href="{% url 'js:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/js.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/js.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">Javascript</div>
           </a>
         </div>
       </div>
 
-      <div class="col">
-        <div class="text-center mb-5 mt-5 p-4 rounded">
+      <div class="col-md-3 mb-5 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;" href="{% url 'dom:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/dom.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/dom.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">DOM</div>
           </a>
         </div>
       </div>
 
-      <div class="col">
-        <div class="text-center mt-5 p-4 rounded">
+      <div class="col-md-3 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;" href="{% url 'bootstrap:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/bootstrap.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/bootstrap.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">Bootstrap</div>
           </a>
         </div>
       </div>
 
-      <div class="col">
-        <div class="text-center mt-5 p-4 rounded">
+      <div class="col-md-3 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;" href="{% url 'python:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/python.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/python.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">Python</div>
           </a>
         </div>
       </div>
 
-      <div class="col">
-        <div class="text-center mt-5 p-4 rounded">
+      <div class="col-md-3 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;" href="{% url 'oop:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/oop.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/oop.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">OOP</div>
           </a>
         </div>
       </div>
 
-      <div class="col">
-        <div class="text-center mt-5 p-4 rounded">
+      <div class="col-md-3 mt-5">
+        <div class="text-center">
           <a style="text-decoration: none;" href="{% url 'django:page' %}">
-            <img class="img-responsive mb-5" src="{% static 'img/logo/django.png' %}" alt="">
+            <div class="col-sm">
+              <img class="img-responsive mb-5" src="{% static 'img/logo/django.png' %}" alt="">
+            </div>
             <div class="card-footer text-dark shadow">Django</div>
           </a>
         </div>

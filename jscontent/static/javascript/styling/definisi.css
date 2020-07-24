@@ -8,9 +8,12 @@ body{
 }
 div #article{
   font-size: 15pt;
-  margin: 100px 80px 100px 20px;
   text-align: justify;
   line-height: 35px;
+}
+#article .card{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #article h1{
   font-weight: bold;
@@ -18,9 +21,8 @@ div #article{
 #article hr{
   margin-top: -5px;
 }
-#article h3{
+#article h4, h5{
   font-weight: bold;
-  font-size: 18pt;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -141,14 +143,14 @@ pre .tex .formula {background: #073642;}
 /* sidebar */
 .card{
     margin-right: 50px;
+    margin-left: 30px;
 }
 #sidebar{
-  margin-top: 200px;
+  margin-top: 50px;
 }
-#sidebar h2{
+.text-center{
   font-weight: bold;
   padding-bottom: 10px;
-  font-size: 20pt;
 }
 #title{
   font-size: 13pt;

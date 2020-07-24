@@ -7,47 +7,51 @@
 
 {% block Contents %}
     <link rel="stylesheet" href="{% static "html/styling/content.css" %}">
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
 
-      <div class="col-sm-12 col-lg-7" id="article">
-        <h1>{{content.title1}}</h1>
-        <hr class="bg-dark mb-5">
+      <div class="col-sm-12 col-lg-8 mb-5" id="article">
+        <div class="card" style="border: none;">
+          <div class="card-body">
+            <h2 class="card-title" style="font-weight: bold;">{{content.title1}}</h2>
+            <hr class="bg-dark mb-5">
 
-        <img class="mb-5" src="{{content.cover.url}}" alt="cover">
+            <img class="img-fluid mb-5" src="{{content.cover.url}}" alt="cover" width="780px">
 
-        <div class="mt-4">
-          <p>{{content.text1|linebreaksbr}}</p>
+            <div class="card-text">
+              <p>{{content.text1|linebreaksbr}}</p>
 
-          <h3 class="mt-4 mb-2">{{content.title2|linebreaksbr}}</h3>
-          <p>{{content.text2|linebreaksbr}}</p>
+              <h4 class="mt-4 mb-2">{{content.title2|linebreaksbr}}</h4>
+              <p>{{content.text2|linebreaksbr}}</p>
 
-          <h3 class="mt-4 mb-2">{{content.title3|linebreaksbr}}</h3>
-          <p>{{content.text3|linebreaksbr}}</p>
+              <h4 class="mt-4 mb-2">{{content.title3|linebreaksbr}}</h4>
+              <p>{{content.text3|linebreaksbr}}</p>
 
-          <h3 class="mt-4 mb-2">{{content.title4|linebreaksbr}}</h3>
-          <p>{{content.text4|linebreaksbr}}</p>
+              <h4 class="mt-4 mb-2">{{content.title4|linebreaksbr}}</h4>
+              <p>{{content.text4|linebreaksbr}}</p>
 
-          <h3 class="mt-4 mb-2">{{content.title5|linebreaksbr}}</h3>
-          <p>{{content.text5|linebreaksbr}}</p>
+              <h4 class="mt-4 mb-2">{{content.title5|linebreaksbr}}</h4>
+              <p>{{content.text5|linebreaksbr}}</p>
 
-          <h3 class="mt-4 mb-2">{{content.title6|linebreaksbr}}</h3>
-          <p>{{content.text6|linebreaksbr}}</p>
+              <h4 class="mt-4 mb-2">{{content.title6|linebreaksbr}}</h4>
+              <p>{{content.text6|linebreaksbr}}</p>
 
-              <pre id="pre">
-                <code class="html">{{content.code|linebreaksbr}}</code>
-              </pre>
+                  <pre id="pre">
+                    <code class="html">{{content.code|linebreaksbr}}</code>
+                  </pre>
 
-          <p>{{content.text|linebreaksbr}}</p>
-          <img id="image" src="{{content.image.url}}" alt="">
-          <p class="mt-4">{{content.caption|linebreaksbr}}</p>
+              <p>{{content.text|linebreaksbr}}</p>
+              <img class="img-fluid" id="image" src="{{content.image.url}}" alt="">
+              <p class="mt-4">{{content.caption|linebreaksbr}}</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="col-sm-12 col-lg-4" style="margin-top: 200px;" id="sidebar">
+      <div class="col-sm-12 col-lg-4" style="margin-top: 50px;" id="sidebar">
         <div class="card shadow">
           <div class="card-body">
-            <h2 class="text-center">Artikel Terkait</h2>
+            <h4 class="text-center">Artikel Terkait</h4>
             <ul class="list-group">
               <a class="text-dark" id="title" href="{% url 'html:definisi'%}">
                <li class="list-group-item">Mengenal HTML</li>
@@ -60,9 +64,9 @@
             </ul>
           </div>
         </div>
-        <div class="card shadow mt-5">
+        <div class="card shadow mt-5 mb-5">
           <div class="card-body">
-              <h2 class="text-center">Tutorial Lainnya</h2>
+              <h4 class="text-center">Tutorial Lainnya</h4>
               <ul class="list-group">
                 <a href="{% url 'css:page' %}" class="text-dark" id="title">
                   <li class="list-group-item mb-2">

@@ -8,19 +8,11 @@ body{
 }
 div #article{
   font-size: 15pt;
-  margin: 100px 80px 100px 20px;
   text-align: justify;
   line-height: 35px;
 }
-#article h1{
-  font-weight: bold;
-}
 #article hr{
   margin-top: -5px;
-}
-#article h3{
-  font-weight: bold;
-  font-size: 19pt;
 }
 #article #gambar{
   margin-top: 30px;
@@ -144,13 +136,13 @@ pre .deletion {
 }
 pre .tex .formula {background: #073642;}
 /* sidebar */
-#sidebar .card{
+.card{
   margin-right: 50px;
+  margin-left: 40px;
 }
 .text-center{
   font-weight: bold;
   margin-bottom: 20px;
-  font-size: 20pt;
 }
 #title{
   font-size: 13pt;
@@ -159,8 +151,6 @@ pre .tex .formula {background: #073642;}
 span{
   margin-left: 10px;
 }
-.list-group-item:visited,
-.list-group-item:focus,
 .list-group-item:hover{
   border-color: #292b2c;
   font-weight: bold;

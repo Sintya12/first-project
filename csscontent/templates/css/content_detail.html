@@ -8,45 +8,49 @@
 {% block Contents %}
     <link rel="stylesheet" href="{% static "css/styling/definisi.css" %}">
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
 
-        <div class="col-sm-12 col-lg-7" id="article">
+        <div class="col-sm-12 col-lg-8" id="article">
+          <div class="card" style="border: none;">
+            <div class="card-body">
+              <h2 class="card-title" style="font-weight: bold;">{{content.subtitle}}</h2>
+              <hr class="bg-dark mb-5">
 
-          <h1>{{content.subtitle}}</h1>
-          <hr class="bg-dark mb-5">
+              <img class="img-fluid mb-4" src="{{content.cover.url}}" alt="cover" width="780px">
+              <div class="card-text">
+                <p>{{content.content|linebreaksbr}}</p>
+                <img class="img-fluid" id="gambar" src="{{content.image.url}}" alt=""/>
+                <p class="mt-5">{{content.caption|linebreaksbr}}</p>
+                <h4 class="mt-4 mb-3">{{content.title1}}</h4>
+                <p>{{content.content1|linebreaksbr}}</p>
+                  <pre class="mb-5" data-codetype="CSS" style="margin-left: 0px;"><code>{{content.code1|linebreaksbr}}</code></pre>
+                <p>{{content.text1|linebreaksbr}}</p>
+                <img class="img-fluid" id="gambar" src="{{content.image1.url}}" alt=""/>
+                <p class="mt-5">{{content.caption1|linebreaksbr}}</p>
 
-          <img class="mb-5" src="{{content.cover.url}}" alt="cover">
-            <p>{{content.content|linebreaksbr}}</p>
-            <img id="gambar" src="{{content.image.url}}" alt=""/>
-            <p class="mt-5">{{content.caption|linebreaksbr}}</p>
-            <h3 class="mt-4 mb-3">{{content.title1}}</h3>
-            <p>{{content.content1|linebreaksbr}}</p>
-              <pre class="mb-5" data-codetype="CSS" style="margin-left: 0px;"><code>{{content.code1|linebreaksbr}}</code></pre>
-            <p>{{content.text1|linebreaksbr}}</p>
-            <img id="gambar" src="{{content.image1.url}}" alt=""/>
-            <p class="mt-5">{{content.caption1|linebreaksbr}}</p>
-
-            <h3 class="mt-5 mb-3">{{content.title2}}</h3>
-            <p>{{content.content2|linebreaksbr}}</p>
-              <pre data-codetype="CSS" style="margin-left: 0px;"><code>{{content.code2|linebreaksbr}}</code></pre>
-            <p>{{content.text2}}</p>
-            <img id="gambar" src="{{content.image2.url}}" alt=""/>
-            <p class="mt-5">{{content.caption2|linebreaksbr}}</p>
-            <h3 class="mt-5 mb-3">{{content.title3}}</h3>
-            <p>{{content.content3|linebreaksbr}}</p>
-              <pre data-codetype="HTML"  style="margin-left: 0px;"><code>{{content.code3|linebreaksbr}}</code></pre>
-            <p>{{content.text3|linebreaksbr}}</p>
-            <img id="gambar" src="{{content.image3.url}}" alt="" />
-            <p class="mt-5">{{content.caption3|linebreaksbr}}</p>
-
+                <h4 class="mt-5 mb-3">{{content.title2}}</h4>
+                <p>{{content.content2|linebreaksbr}}</p>
+                  <pre data-codetype="CSS" style="margin-left: 0px;"><code>{{content.code2|linebreaksbr}}</code></pre>
+                <p>{{content.text2}}</p>
+                <img class="img-fluid" id="gambar" src="{{content.image2.url}}" alt=""/>
+                <p class="mt-5">{{content.caption2|linebreaksbr}}</p>
+                <h4 class="mt-5 mb-3">{{content.title3}}</h4>
+                <p>{{content.content3|linebreaksbr}}</p>
+                  <pre data-codetype="HTML"  style="margin-left: 0px;"><code>{{content.code3|linebreaksbr}}</code></pre>
+                <p>{{content.text3|linebreaksbr}}</p>
+                <img class="img-fluid" id="gambar" src="{{content.image3.url}}" alt="" />
+                <p class="mt-5">{{content.caption3|linebreaksbr}}</p>
+              </div>
+            </div>
+          </div>
         </div>
 
 
-        <div class="col-sm-12 col-lg-4" style="margin-top: 200px;" id="sidebar">
+        <div class="col-sm-12 col-lg-4" style="margin-top: 50px;" id="sidebar">
           <div class="card shadow">
           <div class="card-body">
-            <h2 class="text-center">Artikel Terkait</h2>
+            <h4 class="text-center">Artikel Terkait</h4>
             <ul class="list-group">
               <a class="text-dark" id="title" href="{% url 'css:definisi'%}">
                <li class="list-group-item" id="title">Mengenal CSS</li>
@@ -59,9 +63,9 @@
             </ul>
           </div>
         </div>
-        <div class="card shadow mt-5">
+        <div class="card shadow mt-5 mb-5">
           <div class="card-body">
-              <h2 class="text-center">Tutorial Lainnya</h2>
+              <h4 class="text-center">Tutorial Lainnya</h4>
               <ul class="list-group">
                 <a href="{% url 'html:page' %}" class="text-dark" id="title">
                   <li class="list-group-item mb-2">

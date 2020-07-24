@@ -8,46 +8,48 @@
 
 {% block Contents %}
     <link rel="stylesheet" href="{% static "html/styling/definisi.css" %}">
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
 
-        <div class="col-sm-12 col-lg-7" id="article">
+        <div class="col-sm-12 col-lg-8 mb-5" id="article">
+          <div class="card" style="border: none;">
+            <div class="card-body">
+              <h2 class="card-title" style="font-weight: bold;">Mengenal Dasar HTML</h2>
+              <hr class="bg-dark mb-5" id="hr">
 
-          <h1>Mengenal Dasar HTML</h1>
-          <hr class="bg-dark mb-5" id="hr">
+              <img class="img-fluid mb-5" src="{% static 'img/cover/html.png' %}" alt="cover" width="780px;">
 
-          <img class="mb-5" src="{% static 'img/cover/html.png' %}" alt="cover">
+              <div class="card-text">
+                <p>
+                  <b>HTML</b> atau <b>Hypertext Markup Languange</b>   dibuat oleh <em>Tim Bernes-Lee (Seorang ahli Fisika)</em>  saat bekerja di <em>CERN (Organisasi Nuklir di Eropa)</em>. HTML adalah sebuah  yang  bahasa markup  untuk membuat sebuah halaman web, menampilkan berbagai informasi di dalam sebuah browser.
+                </p>
 
-          <div class="mt-4">
-            <p>
-              <b>HTML</b> atau <b>Hypertext Markup Languange</b>   dibuat oleh <em>Tim Bernes-Lee (Seorang ahli Fisika)</em>  saat bekerja di <em>CERN (Organisasi Nuklir di Eropa)</em>. HTML adalah sebuah  yang  bahasa markup  untuk membuat sebuah halaman web, menampilkan berbagai informasi di dalam sebuah browser.
-            </p>
+                <h5>Kenapa HTML penting dipelajari ?</h5>
+                <p>Karena html merupakan bahan dasar dalam pembuatan sebuah web.</p>
 
-            <h5>Kenapa HTML penting dipelajari ?</h5>
-            <p>Karena html merupakan bahan dasar dalam pembuatan sebuah web.</p>
-
-            <p>
-              Istilah yang harus dipelajari dalam HTML :
-            </p>
-            <p>
-              <b>Dokumen HTML</b> adalah kumpulan teks sederhana yang terdiri dari konten halaman dan tag halaman untuk menandai  konten tersebut agar dapat dibaca oleh browser.
-            </p>
-            <p>
-              <b>Elemen HTML</b> adalah konten halaman yang sudah ditandai oleh tag HTML.<br> <b>Ekstensi File</b> pada HTML yaitu <code class="text-dark">.html</code>.</p>
-            <p>
-              <b>Tag</b>, bisa kita katakan sebagai sebuah penanda. Penanda awalan dan akhiran sebuah elemen. Tag diapit dengan kurung siku <code class="text-dark">(&lt;&#46;&#46;&#46;&gt;)&#44;</code> seperti tag <code class="text-dark">&lt;html&gt;&#46;&#46;&#46;&lt;&#47;html&gt;</code>&#46;
-            </p>
-            <p>
-              <b>Atribut</b> adalah bagian dari elemen yang melengkapi elemen tersebut. Atribut tersebut memiliki ciri-ciri atau nilai. Contoh : atribut href yang berfungsi menentukan alamat link dari elemen <code class="text-info">a</code> &#46;
-            </p>
+                <p>
+                  Istilah yang harus dipelajari dalam HTML :
+                </p>
+                <p>
+                  <b>Dokumen HTML</b> adalah kumpulan teks sederhana yang terdiri dari konten halaman dan tag halaman untuk menandai  konten tersebut agar dapat dibaca oleh browser.
+                </p>
+                <p>
+                  <b>Elemen HTML</b> adalah konten halaman yang sudah ditandai oleh tag HTML.<br> <b>Ekstensi File</b> pada HTML yaitu <code class="text-dark">.html</code>.</p>
+                <p>
+                  <b>Tag</b>, bisa kita katakan sebagai sebuah penanda. Penanda awalan dan akhiran sebuah elemen. Tag diapit dengan kurung siku <code class="text-dark">(&lt;&#46;&#46;&#46;&gt;)&#44;</code> seperti tag <code class="text-dark">&lt;html&gt;&#46;&#46;&#46;&lt;&#47;html&gt;</code>&#46;
+                </p>
+                <p>
+                  <b>Atribut</b> adalah bagian dari elemen yang melengkapi elemen tersebut. Atribut tersebut memiliki ciri-ciri atau nilai. Contoh : atribut href yang berfungsi menentukan alamat link dari elemen <code class="text-info">a</code> &#46;
+                </p>
+              </div>
+            </div>
           </div>
-
         </div>
 
-        <div class="col-sm-12 col-lg-4" style="margin-top: 200px;"  id="sidebar">
+        <div class="col-sm-12 col-lg-4" style="margin-top: 50px;"  id="sidebar">
           <div class="card shadow">
             <div class="card-body">
-              <h2 class="text-center">Artikel Terkait</h2>
+              <h3 class="text-center display-5">Artikel Terkait</h3>
               <ul class="list-group">
                 {% for content in content_list %}
                    <a class="text-dark" id="title" href="{% url 'html:content' content.slug %}">
@@ -57,9 +59,9 @@
               </ul>
             </div>
           </div>
-          <div class="card shadow mt-5">
+          <div class="card shadow mt-5 mb-5">
             <div class="card-body">
-                <h2 class="text-center">Tutorial Lainnya</h2>
+                <h3 class="text-center display-5">Tutorial Lainnya</h3>
                 <ul class="list-group">
                   <a href="{% url 'css:page' %}" class="text-dark" id="title">
                     <li class="list-group-item mb-2">

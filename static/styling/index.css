@@ -31,18 +31,17 @@ nav .nav-link:hover{
 .jumbotron-fluid{
   margin-top: 230px;
 }
-h4{
-  padding: 50px;
-}
 .card-footer{
-  font-size: 17pt;
   font-weight: bold;
+  font-size: 17pt;
 }
 .text-dark:hover{
   font-weight: lighter;
 }
 .img-responsive{
   margin-bottom: 35px;
+  width: 130px;
+  height: 130px;
 }
 .img-responsive:visited,
 .img-responsive:hover{

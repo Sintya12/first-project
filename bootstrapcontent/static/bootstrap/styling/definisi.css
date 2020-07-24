@@ -8,31 +8,27 @@ body{
 }
 div #article{
   font-size: 15pt;
-  margin: 150px 80px 100px 20px;
   text-align: justify;
   line-height: 35px;
 }
-#article h1{
-  font-weight: bold;
+#article .card{
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #article hr{
   margin-top: -5px;
 }
-#article h3{
-  font-weight: bold;
-  font-size: 19pt;
-}
 /* sidebar */
 .card{
-    margin-right: 50px;
+  margin-right: 50px;
+  margin-left: 30px;
 }
 #sidebar{
-  margin-top: 250px;
+  margin-top: 50px;
 }
-#sidebar h2{
+.text-center{
   font-weight: bold;
   padding-bottom: 10px;
-  font-size: 20pt;
 }
 #title{
   font-size: 13pt;
@@ -41,8 +37,6 @@ div #article{
 span{
   margin-left: 10px;
 }
-.list-group-item:visited,
-.list-group-item:focus,
 .list-group-item:hover{
   border-color: #292b2c;
   font-weight: bold;

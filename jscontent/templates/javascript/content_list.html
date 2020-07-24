@@ -7,80 +7,83 @@
 
 {% block Contents %}
     <link rel="stylesheet" href="{% static "javascript/styling/definisi.css" %}">
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
 
-        <div class="col-sm-12 col-lg-7" id="article">
+        <div class="col-sm-12 col-lg-8 mb-5" id="article">
+          <div class="card" style="border: none;">
+            <div class="card-body">
+              <h2 class="card-title" style="font-weight: bold;">Mengenal Javascript</h2>
+              <hr class="bg-dark mb-5" id="hr">
 
-          <h1>Mengenal Dasar Javascript</h1>
-          <hr class="bg-dark mb-5" id="hr">
+              <img class="img-fluid mb-5" src="{% static 'img/cover/js.png' %}" alt="cover" width="780px">
 
-          <img class="mb-5" src="{% static 'img/cover/js.png' %}" alt="cover">
+              <div class="card-text">
+                <p><em>"Javascript berguna untuk menyempurnakan sebuah tampilan dan sistem halaman web"</em></p>
+                <p>JavaScript dibuat dan didesain oleh <em>Brandan Eich, seorang karyawan Netscape</em>, pada bulan September 1995. Awalnya bahasa pemrograman ini disebut <em>Mocha</em>, kemudian diganti ke <em>Mona</em>, lalu <em>LiveScript</em> sebelum akhirnya resmi menyandang nama <em>JavaScript</em>.</p>
+                <p>Sejak saat itu, JavaScript terus bertumbuh dan berkembang. Pada akhirnya di tahun 2016, sebanyak 92% website diketahui menggunakan JavaScript.</p>
+                <p>Javasript adalah sebuah bahasa permrograman yang khusus dirancang untuk website.</p>
+                <p><i>Javascript berjalan disisi klien</i></p>
+                <p>Artinya penggunaan javascript hanya terbatas pada web-browser saja, tidak dapat melakukan manipulasi data pada sisi server. Sebuah javascript diapit oleh tag <code class="text-dark">&lt;script&gt;&lt;&#47;script&gt;</code>&#46;</p>
+                <p>File pada Javascript berekstensi <code class="text-dark">.js&#44; .javascript</code>.</p>
 
-          <div class="mt-5">
-            <p><em>"Javascript berguna untuk menyempurnakan sebuah tampilan dan sistem halaman web"</em></p>
-            <p>JavaScript dibuat dan didesain oleh <em>Brandan Eich, seorang karyawan Netscape</em>, pada bulan September 1995. Awalnya bahasa pemrograman ini disebut <em>Mocha</em>, kemudian diganti ke <em>Mona</em>, lalu <em>LiveScript</em> sebelum akhirnya resmi menyandang nama <em>JavaScript</em>.</p>
-            <p>Sejak saat itu, JavaScript terus bertumbuh dan berkembang. Pada akhirnya di tahun 2016, sebanyak 92% website diketahui menggunakan JavaScript.</p>
-            <p>Javasript adalah sebuah bahasa permrograman yang khusus dirancang untuk website.</p>
-            <p><i>Javascript berjalan disisi klien</i></p>
-            <p>Artinya penggunaan javascript hanya terbatas pada web-browser saja, tidak dapat melakukan manipulasi data pada sisi server. Sebuah javascript diapit oleh tag <code class="text-dark">&lt;script&gt;&lt;&#47;script&gt;</code>&#46;</p>
-            <p>File pada Javascript berekstensi <code class="text-dark">.js&#44; .javascript</code>.</p>
+                  <pre data-codetype="HTML"><code>&lt;script language=&#34;javascript&#34;&gt;<br>  //javascripy kode disini…<br>&lt;&#47;script&gt; <br><br>Atau <br><br>&lt;script type=&#34;text&#47;javascript&#34;&gt;<br>  //javascripy kode disini….<br>&lt;&#47;script&gt;</code></pre>
 
-              <pre data-codetype="HTML"><code>&lt;script language=&#34;javascript&#34;&gt;<br>  //javascripy kode disini…<br>&lt;&#47;script&gt; <br><br>Atau <br><br>&lt;script type=&#34;text&#47;javascript&#34;&gt;<br>  //javascripy kode disini….<br>&lt;&#47;script&gt;</code></pre>
+                <h4 class="mt-5 mb-3">Penggunaan Kode JS</h4>
+                <p>Sebenarnya sintaks javascript dengan bahasa pemrogramman lainnya itu sama yang membedakan hanya karakteristik  sintaks  dari setiap bahasa pemrogramman tersebut.<br>Sebelum menggunakan kode javascript diharapkan mengerti tentang struktur bagian dasar kode javascript, antara lain :</p>
 
-            <h2 class="mt-5 mb-3">Penggunaan Kode JS</h2>
-            <p>Sebenarnya sintaks javascript dengan bahasa pemrogramman lainnya itu sama yang membedakan hanya karakteristik  sintaks  dari setiap bahasa pemrogramman tersebut.<br>Sebelum menggunakan kode javascript diharapkan mengerti tentang struktur bagian dasar kode javascript, antara lain :</p>
+                <!-- Struktur JS -->
+                <!-- Function() -->
+                <h5>Function()</h5>
+                <p>Function merupakan sebuah blok kode atau beberapa baris kode pada javascript. Function juga merupakan fasilitas disetiap pemrograman untuk membuat sebuah perintah yg dapat digunakan berulangkali.</p>
 
-            <!-- Struktur JS -->
-            <!-- Function() -->
-            <h3>Function()</h3>
-            <p>Function merupakan sebuah blok kode atau beberapa baris kode pada javascript. Function juga merupakan fasilitas disetiap pemrograman untuk membuat sebuah perintah yg dapat digunakan berulangkali.</p>
+                <!-- Id wrap -->
+                <h5>getElementById('wrap').innerHTML = ;</h5>
+                <p>getElementById('wrap') diambil element yang berdasarkan id-nya <code>&lit;div id="wrap"&gt;&lt;/div&gt;</code> jadi dapat diubah, tidak harus berId <b>wrap</b>. Lalu pada <code class="text-dark">innerHTML</code> itu dapat berisi tipe data string, tipe data angka, variabel, dll.</p>
 
-            <!-- Id wrap -->
-            <h3>getElementById('wrap').innerHTML = ;</h3>
-            <p>getElementById('wrap') diambil element yang berdasarkan id-nya <code>&lit;div id="wrap"&gt;&lt;/div&gt;</code> jadi dapat diubah, tidak harus berId <b>wrap</b>. Lalu pada <code class="text-dark">innerHTML</code> itu dapat berisi tipe data string, tipe data angka, variabel, dll.</p>
+                <!-- Parameter -->
+                <h5>Parameter</h5>
+                <p>Parameter adalah sebuah nilai yang akan diletakkan diantara kurung pada <code class="text-dark">function()</code> berguna untuk dapat diolah datanya di dalam fungsi itu sendiri.</p>
 
-            <!-- Parameter -->
-            <h3>Parameter</h3>
-            <p>Parameter adalah sebuah nilai yang akan diletakkan diantara kurung pada <code class="text-dark">function()</code> berguna untuk dapat diolah datanya di dalam fungsi itu sendiri.</p>
+                <p>Contoh pada file dibawah ini : <br><br>input_js.html</p>
 
-            <p>Contoh pada file dibawah ini : <br><br>input_js.html</p>
+                  <pre data-codetype="HTML"><code=>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en" dir="ltr"&gt;<br> &lt;head&gt;<br>  &lt;meta charset="utf-8"&gt;<br>  &lt;title&gt;Struktur Kode JS&lt;/title&gt;<br> &lt;/head&gt;<br> &lt;body&gt;<br>  &lt;h4&gt;Struktur Kode JS&lt;/h4&gt;<br>  &lt;!-- Id wrap --&gt;<br>  &lt;div id="hasil"&gt;&lt;/div&gt;<br>  &lt;script type="text/javascript"&gt;<br>   &lt;!--- function ---&gt;<br>   function jsKu(tempat) {<br>    &lt;!-- Parameter --&gt;<br>    var x = tempat + "Bali.";<br>    &lt;!-- Id wrap --&gt;<br>    document.getElementById("hasil").innerHTML = x ;<br>   }<br>   jsKu("Anton dan keluarga pergi ke ");<br>  &lt;/script&gt;<br> &lt;/body&gt;<br>&lt;/html&gt;</code></pre>
 
-              <pre data-codetype="HTML"><code=>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en" dir="ltr"&gt;<br> &lt;head&gt;<br>  &lt;meta charset="utf-8"&gt;<br>  &lt;title&gt;Struktur Kode JS&lt;/title&gt;<br> &lt;/head&gt;<br> &lt;body&gt;<br>  &lt;h4&gt;Struktur Kode JS&lt;/h4&gt;<br>  &lt;!-- Id wrap --&gt;<br>  &lt;div id="hasil"&gt;&lt;/div&gt;<br>  &lt;script type="text/javascript"&gt;<br>   &lt;!--- function ---&gt;<br>   function jsKu(tempat) {<br>    &lt;!-- Parameter --&gt;<br>    var x = tempat + "Bali.";<br>    &lt;!-- Id wrap --&gt;<br>    document.getElementById("hasil").innerHTML = x ;<br>   }<br>   jsKu("Anton dan keluarga pergi ke ");<br>  &lt;/script&gt;<br> &lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+                <p>Output yang ditampilkan :</p>
+                <img class="img-fluid mb-5" src="{% static 'img/property/js/struktur kode.png' %}" alt="">
 
-            <p>Output yang ditampilkan :</p>
-            <img src="{% static 'img/property/js/struktur kode.png' %}" alt="">
+                <!-- Penggunaan JS -->
+                <p class="mt-4">Cara penggunaan sebuah  kode javascript ke dalam halaman web  hampir sama dengan css, terdapat 2 metode yaitu :</p>
+                <ul style="margin-left: -15px;">
+                  <!-- Internal -->
+                  <li><b>Metode Internal</b>&#44; dengan memasukkan secara langsung ke dalam html. <br><br>internal.html</li>
 
-            <!-- Penggunaan JS -->
-            <p class="mt-4">Cara penggunaan sebuah  kode javascript ke dalam halaman web  hampir sama dengan css, terdapat 2 metode yaitu :</p>
-            <ul style="margin-left: -15px;">
-              <!-- Internal -->
-              <li><b>Metode Internal</b>&#44; dengan memasukkan secara langsung ke dalam html. <br><br>internal.html</li>
+                    <pre data-codetype="HTML"><code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en" dir="ltr"&gt;<br> &lt;head&gt;<br>  &lt;meta charset="utf-8"&gt;<br>  &lt;title&gt;Penggunaan kode JS&lt;/title&gt;<br>  &lt;/head&gt;<br> &lt;body&gt;<br>  &lt;h4&gt;Penggunaan kode JS: Metode internal&lt;/h4&gt;<br>  &lt;div id="wrap"&gt;&lt;/div&gt;<br>  &lt;script type="text/javascript"&gt;<br>   function PrintText(nama) {<br>    var text = nama + "Rio.";<br>    document.getElementById("wrap").innerHTML = text ;<br>   }<br>   PrintText("Laki - laki itu bernama ");<br>  &lt;/script&gt;<br> &lt;/body&gt;<br>&lt;/html&gt;</code></pre>
 
-                <pre data-codetype="HTML"><code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en" dir="ltr"&gt;<br> &lt;head&gt;<br>  &lt;meta charset="utf-8"&gt;<br>  &lt;title&gt;Penggunaan kode JS&lt;/title&gt;<br>  &lt;/head&gt;<br> &lt;body&gt;<br>  &lt;h4&gt;Penggunaan kode JS: Metode internal&lt;/h4&gt;<br>  &lt;div id="wrap"&gt;&lt;/div&gt;<br>  &lt;script type="text/javascript"&gt;<br>   function PrintText(nama) {<br>    var text = nama + "Rio.";<br>    document.getElementById("wrap").innerHTML = text ;<br>   }<br>   PrintText("Laki - laki itu bernama ");<br>  &lt;/script&gt;<br> &lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+                  <p>Output yang ditampilkan</p>
+                  <img class="img-fluid mb-5" src="{% static 'img/property/js/metode internal.png' %}" alt="">
 
-              <p>Output yang ditampilkan</p>
-              <img class="mb-5" src="{% static 'img/property/js/metode internal.png' %}" alt="">
+                  <!-- Eksternal -->
+                  <li><b>Metode Eksternal</b>&#44; dengan membuat file js terpisah.<br>Jika menggunakan metode eksternal buat file javascript terpisah. Lalu import file js tersebut pada halaman html.<br><br>eksternal.html</li>
 
-              <!-- Eksternal -->
-              <li><b>Metode Eksternal</b>&#44; dengan membuat file js terpisah.<br>Jika menggunakan metode eksternal buat file javascript terpisah. Lalu import file js tersebut pada halaman html.<br><br>eksternal.html</li>
+                    <pre class="mt-3" data-codetype="HTML"><code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en" dir="ltr"&gt;<br> &lt;head&gt;<br>  &lt;meta charset="utf-8"&gt;<br>  &lt;title&gt;Penggunaan kode JS&lt;/title&gt;<br> &lt;/head&gt;<br> &lt;body&gt;<br>  &lt;h4&gt;Penggunaan Metode Eksternal JS&lt;/h4&gt;<br>  &lt;div id="wrap"&gt;&lt;/div&gt;<br>  &lt;script type="text/javascript" src="../Javascript/scripts.js"&gt;&lt;/script&gt;<br> &lt;/body&gt;<br>&lt;/html&gt;
+                    </code></pre>
 
-                <pre class="mt-3" data-codetype="HTML"><code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en" dir="ltr"&gt;<br> &lt;head&gt;<br>  &lt;meta charset="utf-8"&gt;<br>  &lt;title&gt;Penggunaan kode JS&lt;/title&gt;<br> &lt;/head&gt;<br> &lt;body&gt;<br>  &lt;h4&gt;Penggunaan Metode Eksternal JS&lt;/h4&gt;<br>  &lt;div id="wrap"&gt;&lt;/div&gt;<br>  &lt;script type="text/javascript" src="../Javascript/scripts.js"&gt;&lt;/script&gt;<br> &lt;/body&gt;<br>&lt;/html&gt;
-                </code></pre>
+                  <p class="mt-5">scripts.js</p>
 
-              <p class="mt-5">scripts.js</p>
+                    <pre data-codetype="HTML"><code>function PrintText(nama) {<br>  var text = nama + "Talita.";<br>  document.getElementById("wrap").innerHTML = text ;<br>}<br>PrintText("Wanita itu bernama ");</code></pre>
 
-                <pre data-codetype="HTML"><code>function PrintText(nama) {<br>  var text = nama + "Talita.";<br>  document.getElementById("wrap").innerHTML = text ;<br>}<br>PrintText("Wanita itu bernama ");</code></pre>
-
-              <p>Output yang ditampilkan :</p>
-              <img class="mb-5" src="{% static 'img/property/js/metode eksternal.png' %}" alt="">
+                  <p>Output yang ditampilkan :</p>
+                  <img class="img-fluid mb-5" src="{% static 'img/property/js/metode eksternal.png' %}" alt="">
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="col-sm-12 col-lg-4" id="sidebar">
           <div class="card shadow" >
             <div class="card-body">
-                <h2 class="text-center">Artikel Terkait</h2>
+                <h4 class="text-center">Artikel Terkait</h4>
                 <ul class="list-group">
                   {% for content in content_list %}
                    <a class="text-dark" id="title" href="{% url 'js:content' content.slug %}">
@@ -91,9 +94,9 @@
             </div>
           </div>
 
-          <div class="card shadow mt-5">
+          <div class="card shadow mt-5 mb-5">
             <div class="card-body">
-              <h2 class="text-center">Tutorial Lainnya</h2>
+              <h4 class="text-center">Tutorial Lainnya</h4>
               <ul class="list-group">
                 <a class="text-dark" id="title" href="{% url 'html:page'  %}">
                   <li class="list-group-item">
@@ -120,7 +123,7 @@
                     <img src="{% static 'img/logo/python.png' %}" alt="" width="30px"><span id="title">Python</span>
                   </li>
                 </a>
-                <a class="text-dark" id="title" href="{% url 'oop:page' %}}">
+                <a class="text-dark" id="title" href="{% url 'oop:page' %}">
                   <li class="list-group-item">
                     <img src="{% static 'img/logo/oop.png' %}" alt="" width="30px"><span id="title">OOP</span>
                   </li>

@@ -13,10 +13,10 @@ body{
   font-weight: bold;
 }
 #article .card{
-  font-size: 23px;
+  font-size: 20px;
   margin-bottom: 10px;
-  width: 700px;
-  max-height: 70px;
+  max-width: 700px;
+  max-height: 80px;
 }
 #article .card a:before{
   position: absolute;
@@ -42,7 +42,7 @@ body{
   margin-bottom: 100px;
 }
 #sidebar span{
-  font-size: 15pt;
+  font-size: 14pt;
   margin-left: 10px;
 }
 .text-center{

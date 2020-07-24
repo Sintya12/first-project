@@ -8,54 +8,58 @@
 {% block Contents %}
     <link rel="stylesheet" href="{% static "document-object-manipulation/styling/content.css" %}">
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
 
-        <div class="col-sm-12 col-lg-7" id="article">
-          <h1>{{content.subtitle}}</h1>
-          <hr class="bg-dark mb-5">
-          <img class="mb-5" src="{{content.cover.url}}" alt="cover">
-          <div class="mt-5">
-            <p class="mb-5">{{content.content|linebreaksbr}}</p>
-            <h3 class="mb-2">{{content.title1}}</h3>
-            <p>{{content.content1|linebreaksbr}}</p>
-              <pre data-codetype="HTML"><code>{{content.code1|linebreaksbr}}</code></pre>
-            <p class="mt-5">{{content.text1|linebreaksbr}}</p>
-            <img class="mt-2" id="image" src="{{content.image1.url}}" style="margin-bottom: 30px;" alt=" "/>
-            <p>{{content.caption1|linebreaksbr}}</p>
-            <h3 class="mt-5 mb-2">{{content.title2}}</h3>
-            <p>{{content.content2|linebreaksbr}}</p>
-              <pre data-codetype="HTML"><code>{{content.code2|linebreaksbr}}</code></pre>
-            <p class="mt-5">{{content.text2|linebreaksbr}}</p>
-            <img class="mt-2" id="image" src="{{content.image2.url}}" style="margin-bottom: 30px;" alt=" "/>
-            <p>{{content.caption2|linebreaksbr}}</p>
-            <h3 class="mt-5 mb-2">{{content.title3}}</h3>
-            <p>{{content.content3|linebreaksbr}}</p>
-              <pre data-codetype="HTML"><code>{{content.code3|linebreaksbr}}</code></pre>
-            <p class="mt-5">{{content.text3|linebreaksbr}}</p>
-            <img class="mt-2" id="image" src="{{content.image3.url}}" style="margin-bottom: 30px;" alt="&#32;"/>
-            <p>{{content.caption3|linebreaksbr}}</p>
-            <h3 class="mt-5 mb-2">{{content.title4}}</h3>
-            <p>{{content.content4|linebreaksbr}}</p>
-              <pre data-codetype="HTML"><code>{{content.code4|linebreaksbr}}</code></pre>
-            <p class="mt-5">{{content.text4|linebreaksbr}}</p>
-            <img class="mt-2" id="image" src="{{content.image4.url}}" alt=" "/>
-            <p class="mt-4 mb-2">{{content.caption4|linebreaksbr}}</p>
-            <h3 class="mt-5 mb-2">{{content.title5}}</h3>
-            <p>{{content.content5|linebreaksbr}}</p>
-              <pre data-codetype="HTML"><code>{{content.code5|linebreaksbr}}</code></pre>
-            <p class="mt-5">{{content.text5|linebreaksbr}}</p>
-            <img class="mt-2" id="image" src="{{content.image5.url}}" alt=" "/>
-            <p class="mt-4 mb-2">{{content.caption5|linebreaksbr}}</p>
+        <div class="col-sm-12 col-lg-8 mb-5" id="article">
+          <div class="card" style="border: none;">
+            <div class="card-body">
+              <h2 class="card-title" style="font-weight: bold;">{{content.subtitle}}</h2>
+              <hr class="bg-dark mb-5">
+              <img class="img-fluid mb-5" src="{{content.cover.url}}" alt="cover" width="780px">
+              <div class="mt-5">
+                <p class="mb-5">{{content.content|linebreaksbr}}</p>
+                <h3 class="mb-2">{{content.title1}}</h3>
+                <p>{{content.content1|linebreaksbr}}</p>
+                  <pre data-codetype="HTML"><code>{{content.code1|linebreaksbr}}</code></pre>
+                <p class="mt-5">{{content.text1|linebreaksbr}}</p>
+                <img class="img-fluid mt-2" id="image" src="{{content.image1.url}}" style="margin-bottom: 30px;" alt=" "/>
+                <p>{{content.caption1|linebreaksbr}}</p>
+                <h3 class="mt-5 mb-2">{{content.title2}}</h3>
+                <p>{{content.content2|linebreaksbr}}</p>
+                  <pre data-codetype="HTML"><code>{{content.code2|linebreaksbr}}</code></pre>
+                <p class="mt-5">{{content.text2|linebreaksbr}}</p>
+                <img class="img-fluid mt-2" id="image" src="{{content.image2.url}}" style="margin-bottom: 30px;" alt=" "/>
+                <p>{{content.caption2|linebreaksbr}}</p>
+                <h3 class="mt-5 mb-2">{{content.title3}}</h3>
+                <p>{{content.content3|linebreaksbr}}</p>
+                  <pre data-codetype="HTML"><code>{{content.code3|linebreaksbr}}</code></pre>
+                <p class="mt-5">{{content.text3|linebreaksbr}}</p>
+                <img class="img-fluid mt-2" id="image" src="{{content.image3.url}}" style="margin-bottom: 30px;" alt="&#32;"/>
+                <p>{{content.caption3|linebreaksbr}}</p>
+                <h3 class="mt-5 mb-2">{{content.title4}}</h3>
+                <p>{{content.content4|linebreaksbr}}</p>
+                  <pre data-codetype="HTML"><code>{{content.code4|linebreaksbr}}</code></pre>
+                <p class="mt-5">{{content.text4|linebreaksbr}}</p>
+                <img class="img-fluid mt-2" id="image" src="{{content.image4.url}}" alt=" "/>
+                <p class="mt-4 mb-2">{{content.caption4|linebreaksbr}}</p>
+                <h3 class="mt-5 mb-2">{{content.title5}}</h3>
+                <p>{{content.content5|linebreaksbr}}</p>
+                  <pre data-codetype="HTML"><code>{{content.code5|linebreaksbr}}</code></pre>
+                <p class="mt-5">{{content.text5|linebreaksbr}}</p>
+                <img class="img-fluid mt-2" id="image" src="{{content.image5.url}}" alt=" "/>
+                <p class="mt-4 mb-2">{{content.caption5|linebreaksbr}}</p>
+              </div>
+            </div>
           </div>
 
         </div>
 
 
-        <div class="col-sm-12 col-lg-4" style="margin-top: 200px;" id="sidebar">
+        <div class="col-sm-12 col-lg-4" style="margin-top: 50px;" id="sidebar">
           <div class="card shadow" >
             <div class="card-body">
-                <h2 class="text-center">Artikel Terkait</h2>
+                <h3 class="text-center">Artikel Terkait</h3>
                 <ul class="list-group">
                   <a class="text-dark" id="title" href="{% url 'dom:definisi' %}">
                     <li class="list-group-item">Mengenal DOM</li>
@@ -69,9 +73,9 @@
             </div>
           </div>
 
-          <div class="card shadow mt-5">
+          <div class="card shadow mt-5 mb-5">
             <div class="card-body">
-              <h2 class="text-center">Tutorial Lainnya</h2>
+              <h3 class="text-center">Tutorial Lainnya</h3>
               <ul class="list-group">
                 <a class="text-dark" id="title" href="{% url 'html:page'  %}">
                   <li class="list-group-item">

@@ -8,22 +8,19 @@ body{
 }
 div #article{
   font-size: 15pt;
-  margin: 150px 80px 100px 20px;
+  margin-bottom: 100px;
   text-align: justify;
   line-height: 35px;
 }
-#article h1{
+#article .card{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+h2 .card-title{
   font-weight: bold;
 }
 #article hr{
   margin-top: -5px;
-}
-#article h3{
-  font-weight: bold;
-  font-size: 19pt;
-}
-#article #image{
-  margin-top: 30px;
 }
 /* CODE */
 #pre{
@@ -144,27 +141,20 @@ pre .deletion {
 }
 pre .tex .formula {background: #073642;}
 /* sidebar */
-#sidebar .card{
-  margin-right: 50px;
+.card{
+    margin-right: 50px;
+    margin-left: 30px;
 }
 .text-center{
   font-weight: bold;
-  margin-bottom: 20px;
-  font-size: 20pt;
-}
-.text-center:hover{
-  font-weight: lighter;
-  transition: 0.3s;
+  padding-bottom: 10px;
 }
 #title{
-  font-size: 13pt;
   text-decoration: none;
 }
 span{
   margin-left: 10px;
 }
-.list-group-item:visited,
-.list-group-item:focus,
 .list-group-item:hover{
   border-color: #292b2c;
   font-weight: bold;
