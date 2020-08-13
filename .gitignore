@@ -1,0 +1,7 @@
+*.pyc
+*~
+/.atom
+__pycache__
+env
+db.sqlite3
+.DS_Store
